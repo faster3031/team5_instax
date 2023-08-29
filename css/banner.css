@@ -1,6 +1,58 @@
 /* 배너 */
 .banner {
+    margin-top: 100px;
 }
+.banner .inner{
+    display: flex;
+}
+.banner-box{
+    position: relative;
+    width: 50%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    gap: 20px;
+}
+.banner-title{
+    width: 170px;
+    height: 50px;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+.banner .banner-event-title{
+    background-color: #707070;
+}
+.banner .banner-set-title{
+    background-color: #9571ff;
+}
+.banner .banner-event{
+    background-color: #D3D3D3;
+}
+.banner .banner-event img{
+    width: 60%;
+}
+.banner .banner-set{
+    background-color: #C1ADFB;
+}
+.banner .banner-set-txt{
+    font-size: 20px;
+    border: 500;
+}
+.banner-button{
+    position: absolute;
+    bottom: 40px;
+    background-color: #fff;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+}
+
 
 @media all and (max-width: 1680px) {
 }
