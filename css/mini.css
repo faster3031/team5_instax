@@ -1,0 +1,95 @@
+/* 미니 필름 */
+@charset "utf-8";
+.mini {
+  margin: 0 auto;
+  height: 800px;
+  background-color: #90deff;
+}
+.mini .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mini-circle {
+  position: relative;
+  width: 43%;
+  border-radius: 500px;
+  background-color: #fff;
+}
+.mini-circle::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.mini-film{
+  position: absolute;
+  width: 25%;
+  
+}
+.mini-film img {
+  width: 100%;
+}
+.mini-film1 {
+  top: 4%;
+  left: 29%;
+}
+.mini-film2{
+  top: 7%;
+  left: 54%;
+  transform: rotate(20deg);
+}
+.mini-film3 {
+  top: 20%;
+  left: 72%;
+  transform: rotate(43deg);
+}
+.mini-film4 {
+  top: 39%;
+  left: 87%;
+  transform: rotate(62deg);
+}
+.mini-film5{
+  top: 63%;
+  left: 94%;
+  transform: rotate(82deg);
+}
+.mini-camera {
+  position: absolute;
+  width: 84%;
+  top: -15%;
+  left: -5%;
+  transform: translateY(61%);
+  z-index: 99;
+}
+.mini-camera img {
+  width: 100%;
+}
+.mini-text {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+}
+.mini-text h1 {
+  font-size: 3vw;
+  font-weight: 800;
+  color: black;
+}
+.mini-text h4 {
+  margin-top: 40px;
+  padding: 10px 0px;
+  font-size: 1.2vw;
+  font-weight: 400;
+  color: #636363;
+}
+
+@media all and (max-width: 1680px) {
+}
+
+@media all and (max-width: 1280px) {
+}
+@media all and (max-width: 1024px) {
+}
+@media all and (max-width: 760px) {
+}
+@media all and (max-width: 480px) {
+}
