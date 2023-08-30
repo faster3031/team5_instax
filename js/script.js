@@ -124,8 +124,7 @@ window.addEventListener("load", function () {
             header.classList.remove("header-active");
         }
     });
-
-    // 스크롤 시 movie 배경 변환.
+  
     let scb = 300;
     let scr = 400;
     let movie = document.querySelector(".movie");
