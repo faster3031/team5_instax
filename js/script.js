@@ -59,7 +59,7 @@ window.onload = function(){
     
 };
 
-    // swiper
+// swiper
 window.addEventListener("load", function () {
     const swiper = new Swiper(".sample-slider", {
         loop: true,
@@ -126,8 +126,8 @@ window.addEventListener("load", function () {
     });
 
     // 스크롤 시 movie 배경 변환.
-    let scb = 900;
-    let scr = 980;
+    let scb = 300;
+    let scr = 400;
     let movie = document.querySelector(".movie");
     window.addEventListener("scroll", function () {
         scb = window.document.documentElement.scrollTop;
