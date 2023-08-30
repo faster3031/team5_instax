@@ -1,7 +1,21 @@
 /* 스퀘어 필름 */
 .square {
-    height: 800px;
-    background-color: #FAA489;
+    height: 1080px;
+    position: relative;
+}
+.square::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#c0adb000,#FAA489,#FAA489,#c0adb000);
+  opacity: 0;
+  transition: 1s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.square-active::before{
+  opacity: 1;
 }
 .square .inner {
     display: flex;
@@ -102,56 +116,3 @@
 }
 @media all and (max-width: 480px) {
 }
-<section class="mini">
-        <div class="inner">
-          <div class="mini-circle">
-            <div class="mini-film">
-              <img src="images/film-mini-contact-sheet.png" alt="">
-             </div>
-             <div class="mini-film2">
-              <img src="images/film-mini-confetti.png" alt="">
-             </div>
-             <div class="mini-film3">
-              <img src="images/film-mini-blue-marble.png" alt="">
-             </div>
-             <div class="mini-film4">
-              <img src="images/film-mini-mermaid-tail.png" alt="">
-             </div>
-             <div class="mini-film5">
-              <img src="images/film-mini-rainbow.png" alt="">
-             </div>
-             <div class="mini-camera">
-              <img src="images/camera_12_05.png" alt="">
-            </div>
-          </div>
-          <div class="mini-text">
-            <h1>다양한 디자인의  <br> 필름을 만나보세요.</h1>
-            <h4>필름마다 담긴 느낌과 분위기로 <br>표현하고 싶은 순간을 특별히 담을 수 있습니다. <br>여러가지 선택 속에서 나만의 감성을 찾아보세요.</h4>
-          </div>
-          
-        </div>
-      </section> 
-
-      <section class="wide">
-      <div class="inner">
-          <div class="wide-point">
-            <img src="images/wide-point2.png" alt="">  
-            <span class="wide-point-text">WIDE 300</span>
-          </div>
-            <div class="wide-point2">
-            <img src="images/wide-point.png" alt="">
-            <span class="wide-point-text2">wide film</span>
-        </div>
-          <div class="wide-bg">
-           <div class="wide-circle">
-            <img src="images/Mask group.png" alt=""> 
-          </div>
-          </div> 
-          <div class="wide-camera-wrap">
-            <div class="wide-film"> 
-              <img src="images/pic_example_04.webp" alt="">
-            </div>
-            <div class="wide-camera">
-              <img src="images/camera_08_02.png"  alt="">
-            </div>
-          </div>  
