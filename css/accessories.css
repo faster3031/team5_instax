@@ -2,12 +2,14 @@
 .accessories {
     /* background-color: brown; */
     height: auto;
+    margin-bottom: 150px;
 }
 .accessories .inner{
     /* background-color: bisque; */
     display: flex;
     align-items: center;
     flex-direction: column;
+    height: 800;
 }
 .accessories-title{
     font-size: 60px;

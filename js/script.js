@@ -66,9 +66,9 @@ window.addEventListener("load", function () {
         speed: 1000,
         slidesPerView: 5,
         spaceBetween: 150,
-        autoplay: {delay: 0},
+        autoplay: { delay: 0 },
     });
-    
+
     // top 버튼 스크롤 기능
     const topBtn = document.getElementById("top-btn");
     topBtn.addEventListener("click", function (event) {
@@ -124,10 +124,9 @@ window.addEventListener("load", function () {
             header.classList.remove("header-active");
         }
     });
-
-    // 스크롤 시 movie 배경 변환.
-    let scb = 900;
-    let scr = 980;
+    //  스크롤시 영역 배경 그라디언트
+    let scb = 300;
+    let scr = 400;
     let movie = document.querySelector(".movie");
     window.addEventListener("scroll", function () {
         scb = window.document.documentElement.scrollTop;
@@ -137,6 +136,9 @@ window.addEventListener("load", function () {
             movie.classList.remove("movie-active");
         }
     });
+    AOS.init();
+
+    
     // 스크롤 시 mini section active 
     let mini = document.querySelector(".mini");
     let miniscr = 1700;

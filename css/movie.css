@@ -1,34 +1,45 @@
 /* 영상 */
 .movie {
-    height: 1080px;
-  }
-  .movie-active {
-    transition: background 0.5s;
-    background-color: #c1adfb;
-  }
-  .movie .inner {
-    position: relative;
-    height: 1080px;
-  }
-  video {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 30px;
-    box-shadow: 1px 1px 1px 1px;
-  }
-  
-  @media all and (max-width: 1680px) {
-  }
-  
-  @media all and (max-width: 1280px) {
-  }
-  @media all and (max-width: 1024px) {
-  }
-  @media all and (max-width: 760px) {
-  }
-  @media all and (max-width: 480px) {
-  }
-  
+  height: 1180px;
+  position: relative;
+  z-index: 1;
+}
+.movie::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#c0adb000,#c1adfb,#c1adfb,#c0adb000);
+  opacity: 0;
+  transition: 1s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.movie-active::before{
+  opacity: 1;
+}
+.movie .inner {
+  position: relative;
+  height: 1080px;
+}
+video {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+  box-shadow: 1px 1px 1px 1px;
+}
+
+@media all and (max-width: 1680px) {
+}
+
+@media all and (max-width: 1280px) {
+}
+@media all and (max-width: 1024px) {
+}
+@media all and (max-width: 760px) {
+}
+@media all and (max-width: 480px) {
+}
