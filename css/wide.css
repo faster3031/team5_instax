@@ -1,6 +1,6 @@
 /* 와이드 필름 */
 .wide {
-  height: 800px;
+  height: 1080px;
   background-color: #e5dfe2;
   display: block;
 }
@@ -11,18 +11,22 @@
 }
 .wide-circle {
   position: relative;
-  width: 43%;
+  width:45%;
   border-radius: 500px;
   background-color: #fff;
+  left: 10%; 
+  background: url("../images/film-wide.GIF") no-repeat;
+  background-size: cover;
 }
 .wide-circle::after {
   content: "";
   display: block;
   padding-bottom: 100%;
+  left: 50%;  
 }
 .wide-point {
   position: absolute;
-  left: 38%;
+  left: 34%;
   bottom: -4%;
   z-index: 999;
   
@@ -30,7 +34,7 @@
 .wide-point2 {
   position: absolute;
   top: -1%;
-  left: -5%;
+  left: -9%;
   z-index: 1;
 }
 .wide-point-text {
@@ -55,7 +59,7 @@
   position: absolute;
   width: 84%;
   top: -1%;
-  left: -25%;
+  left: -31%;
   transform: translateY(61%);
   z-index: 99;
 }
@@ -65,7 +69,9 @@ width: 100%;
 .wide-film{
   position: absolute;
   width: 40%;
-  left: 0%;
+  left: -5%;
+  top: 60%;
+  transition-duration: 1s;
 }
 .wide-film img{
   width: 100%;
@@ -86,6 +92,10 @@ width: 100%;
   font-size: 1.2vw;
   font-weight: 400;
   color: #636363;
+}
+/* .wide active */
+.wide-active .wide-film{
+  top: 20%;
 }
 
 @media all and (max-width: 1680px) {

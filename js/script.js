@@ -137,4 +137,38 @@ window.addEventListener("load", function () {
             movie.classList.remove("movie-active");
         }
     });
+    // 스크롤 시 mini section active 
+    let mini = document.querySelector(".mini");
+    let miniscr = 1700;
+    window.addEventListener("scroll", function () {
+      scb = window.document.documentElement.scrollTop;
+      console.log(miniscr)
+        if (scb > miniscr) {
+          mini.classList.add("mini-active");
+        } else {
+          mini.classList.remove("mini-active");
+        }
+    });
+    // 스크롤 시 square section active 
+    let square = document.querySelector(".square");
+    let squarescr = 2880;
+    window.addEventListener("scroll", function () {
+      scb = window.document.documentElement.scrollTop;
+        if (scb > squarescr) {
+          square.classList.add("square-active");
+        } else {
+          square.classList.remove("square-active");
+        }
+    });
+       // 스크롤 시 wide section active 
+       let wide = document.querySelector(".wide");
+       let widescr = 3800;
+       window.addEventListener("scroll", function () {
+         scb = window.document.documentElement.scrollTop;
+           if (scb > widescr) {
+            wide.classList.add("wide-active");
+           } else {
+            wide.classList.remove("wide-active");
+           }
+       });
 });
