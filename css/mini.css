@@ -2,8 +2,22 @@
 @charset "utf-8";
 .mini {
   margin: 0 auto;
-  height: 800px;
-  background-color: #90deff;
+  height:1080px;
+  position: relative;
+}
+.mini::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#c0adb000,#90deff,#90deff,#c0adb000);
+  opacity: 0;
+  transition: 1s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.mini-active::before{
+  opacity: 1;
 }
 .mini .inner {
   display: flex;
@@ -24,7 +38,8 @@
 .mini-film{
   position: absolute;
   width: 25%;
-  
+  opacity: 0;
+  transition-duration: 0.2s;
 }
 .mini-film img {
   width: 100%;
@@ -37,21 +52,29 @@
   top: 7%;
   left: 54%;
   transform: rotate(20deg);
+  transition-delay: 1s;
 }
 .mini-film3 {
   top: 20%;
   left: 72%;
   transform: rotate(43deg);
+  transition-delay: 1.3s;
 }
 .mini-film4 {
   top: 39%;
   left: 87%;
   transform: rotate(62deg);
+  transition-delay: 2s;
 }
 .mini-film5{
   top: 63%;
   left: 94%;
   transform: rotate(82deg);
+  transition-delay: 2.5s;
+}
+/* .mini active */
+.mini-active .mini-film{
+  opacity: 1;
 }
 .mini-camera {
   position: absolute;

@@ -48,6 +48,9 @@ float: left;
     font-size: 14px;
     padding: 5px 0px;
 }
+.footer-right ul li a{
+    font-weight: 500;
+}
 .footer-bottom{
     width: 100%;
 
