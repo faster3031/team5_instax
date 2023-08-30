@@ -66,9 +66,9 @@ window.addEventListener("load", function () {
         speed: 1000,
         slidesPerView: 5,
         spaceBetween: 150,
-        autoplay: {delay: 0},
+        autoplay: { delay: 0 },
     });
-    
+
     // top 버튼 스크롤 기능
     const topBtn = document.getElementById("top-btn");
     topBtn.addEventListener("click", function (event) {
@@ -124,7 +124,7 @@ window.addEventListener("load", function () {
             header.classList.remove("header-active");
         }
     });
-  
+//  스크롤시 영역 배경 그라디언트
     let scb = 300;
     let scr = 400;
     let movie = document.querySelector(".movie");
@@ -136,4 +136,38 @@ window.addEventListener("load", function () {
             movie.classList.remove("movie-active");
         }
     });
+    let miniscb = 1900;
+    let miniscr = 2000;
+    let mini = document.querySelector(".mini");
+    window.addEventListener("scroll", function () {
+        miniscb = window.document.documentElement.scrollTop;
+        if (miniscb > miniscr) {
+            mini.classList.add("mini-active");
+        } else {
+            mini.classList.remove("mini-active");
+        }
+    });
+    let squarescb = 2900;
+    let squarescr = 3000;
+    let square = document.querySelector(".square");
+    window.addEventListener("scroll", function () {
+        squarescb = window.document.documentElement.scrollTop;
+        if (squarescb > squarescr) {
+            square.classList.add("square-active");
+        } else {
+            square.classList.remove("square-active");
+        }
+    });
+    let widescb = 3900;
+    let widescr = 4000;
+    let wide = document.querySelector(".wide");
+    window.addEventListener("scroll", function () {
+        widescb = window.document.documentElement.scrollTop;
+        if (widescb > widescr) {
+            wide.classList.add("wide-active");
+        } else {
+            wide.classList.remove("wide-active");
+        }
+    });
+    AOS.init();
 });
