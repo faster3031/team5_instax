@@ -44,7 +44,7 @@
     position: absolute; 
     top:70%;
    right:75%;
-    z-index: 99999999;
+   z-index: 999;
   }
 
 .square-point-text{
@@ -114,53 +114,27 @@ top: -18%;
 }
 
 @media (max-width: 1280px) {
-  .square .inner {
-    flex-direction: column;
-    align-items: center; 
-    top: 20%;
-    margin-top: 20px;
-  }
-  .square-circle {
-    width: 70%;
-  }
-  .square-text h1 {
-    font-size: 5vw;
-   
-  }
-  .square-text h4 {
-    font-size: 2vw;
-  }
-  .square-point,
-  .square-point2 {
-    position: absolute;
-    top: auto;
-    right: auto;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .square-point2 {
-    bottom: 10%;
-  }
-  .square-point-text,
-  .square-point-text2 {
-    font-size: 3vw;
-  }
-  .square-camera {
-    top: 10%;
-  }
+  
 }
 @media all and (max-width: 1024px) {
 }
 
 @media (max-width: 760px) {
   .square .inner{
+    display: flex;
     margin-top: 170px;
+    text-align: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch;
+    align-content: center;
   }
   .square {
     height: auto;
   }
   .square-circle {
+    order: 2;
     width: 90%;
     top: 50%;
     margin: 27%;
@@ -185,8 +159,15 @@ top: -18%;
     top: 20%;
   }
   .square-text {
-    text-align: center;
-    margin: 30px auto;
+    order:1;
+    
+  }
+  .square-text h1 {
+    font-size: 5vw;
+   
+  }
+  .square-text h4 {
+    font-size: 2vw;
   }
   .square-film {
     top: 40%;
