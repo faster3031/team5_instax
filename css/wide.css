@@ -38,35 +38,36 @@
   padding-bottom: 100%;
   left: 50%;  
 }
-.wide-point {
+.wide-point img{
   position: absolute;
   left: 34%;
   bottom: -4%;
   z-index: 999;
   
 }
-.wide-point2 {
+.wide-point2 img{
   position: absolute;
   top: -1%;
   left: -9%;
   z-index: 1;
 }
 .wide-point-text {
+  width: 50%;
   position: absolute;
   color: #000000;
   font-size: 1.3vw;
   font-weight: 400;
-  top: 46px;
-  right: -125px;
+  top: 102%;
+  right: -17%;
 }
 .wide-point-text2 {
+  width: 50%;
   position: absolute;
   color: #000000;
   font-size: 1.3vw;
   font-weight: 400;
-  top: -47px;
-  left: -47px;
-  width: 100px;
+  top: -7%;
+  left: -13%;
 }
 
 .wide-camera {
@@ -91,6 +92,8 @@ width: 100%;
   width: 100%;
 }
 .wide-text {
+  top: 137px;
+  right: 102%;
   color: #fff;
   font-size: 20px;
   font-weight: 400;
@@ -120,6 +123,55 @@ width: 100%;
 @media all and (max-width: 1024px) {
 }
 @media all and (max-width: 760px) {
+  .wide .inner{
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .wide-circle{
+    order: 2;
+    width: 90%;
+  }
+  .wide-text {
+    order: 1;
+    width: 100%;
+  }
+  .wide-text h1 {
+    font-size: 5vw;
+   
+  }
+  .wide-text h4 {
+    font-size: 2vw;
+  }
+  .wide-point,
+  .wide-point2 {
+    position: static;
+    transform: none;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+   
+  }
+  .wide-point-text,
+  .wide-point-text2 {
+    font-size: 3vw;
+    display: block;
+    margin-top: 5px;
+    right: 72%;
+  }
+  .wide-point-text2{
+    left: -32%;
+  }
+  .wide-point-text{
+    left: 63%;
+  }
 }
 @media all and (max-width: 480px) {
+  .wide .inner{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: flex-start;
+  }
 }
+
+

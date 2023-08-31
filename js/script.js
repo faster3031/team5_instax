@@ -191,4 +191,6 @@ window.addEventListener("load", function () {
             wide.classList.remove("wide-active");
            }
        });
+       
+   
 });

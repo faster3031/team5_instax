@@ -35,12 +35,14 @@
   display: block;
   padding-bottom: 100%;
 }
-.mini-film{
+.mini-film {
   position: absolute;
   width: 25%;
   opacity: 0;
-  transition-duration: 0.2s;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateY(0); /* 초기 위치 */
 }
+
 .mini-film img {
   width: 100%;
 }
@@ -48,29 +50,33 @@
   top: 4%;
   left: 29%;
 }
-.mini-film2{
+
+.mini-film2 {
   top: 7%;
   left: 54%;
-  transform: rotate(20deg);
-  transition-delay: 1s;
+  transform: rotate(20deg) translateY(20px); /* 시작 위치와 약간 이동 */
+  transition-delay: 0.5s; /* 딜레이 추가 */
 }
+
 .mini-film3 {
   top: 20%;
   left: 72%;
-  transform: rotate(43deg);
-  transition-delay: 1.3s;
+  transform: rotate(43deg) translateY(40px);
+  transition-delay: 0.8s;
 }
+
 .mini-film4 {
   top: 39%;
   left: 87%;
-  transform: rotate(62deg);
-  transition-delay: 2s;
+  transform: rotate(62deg) translateY(60px);
+  transition-delay: 1.2s;
 }
-.mini-film5{
+
+.mini-film5 {
   top: 63%;
   left: 94%;
-  transform: rotate(82deg);
-  transition-delay: 2.5s;
+  transform: rotate(82deg) translateY(80px);
+  transition-delay: 1.5s;
 }
 /* .mini active */
 .mini-active .mini-film{
@@ -113,6 +119,34 @@
 @media all and (max-width: 1024px) {
 }
 @media all and (max-width: 760px) {
+  .mini .inner{
+    flex-wrap: wrap;
+    text-align: center;
+ 
+    
+  }
+  .mini-circle{
+    order: 2;
+    width: 100%;
+  }
+  .mini-text {
+    order: 1;
+    width: 100%;
+  }
+  .mini-text h1 {
+    font-size: 5vw;
+   
+  }
+  .mini-text h4 {
+    font-size: 2vw;
+  }
 }
 @media all and (max-width: 480px) {
+  .mini .inner{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+  }
+ 
 }
+

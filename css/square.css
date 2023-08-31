@@ -109,15 +109,96 @@
 .square-active .square-film {
 top: -18%;
 }
-
+/* 반응형 디자인 */
 @media all and (max-width: 1680px) {
 }
 
-@media all and (max-width: 1280px) {
+@media (max-width: 1280px) {
+  .square .inner {
+    flex-direction: column;
+    align-items: center; 
+    top: 20%;
+    margin-top: 20px;
+  }
+  .square-circle {
+    width: 70%;
+  }
+  .square-text h1 {
+    font-size: 5vw;
+   
+  }
+  .square-text h4 {
+    font-size: 2vw;
+  }
+  .square-point,
+  .square-point2 {
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .square-point2 {
+    bottom: 10%;
+  }
+  .square-point-text,
+  .square-point-text2 {
+    font-size: 3vw;
+  }
+  .square-camera {
+    top: 10%;
+  }
 }
 @media all and (max-width: 1024px) {
 }
-@media all and (max-width: 760px) {
+
+@media (max-width: 760px) {
+  .square .inner{
+    margin-top: 170px;
+  }
+  .square {
+    height: auto;
+  }
+  .square-circle {
+    width: 90%;
+    top: 50%;
+    margin: 27%;
+  }
+  .square-point,
+  .square-point2 {
+    position: static;
+    transform: none;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+   
+  }
+  .square-point-text,
+  .square-point-text2 {
+    font-size: 3vw;
+    display: block;
+    margin-top: 5px;
+    right: 72%;
+  }
+  .square-camera {
+    top: 20%;
+  }
+  .square-text {
+    text-align: center;
+    margin: 30px auto;
+  }
+  .square-film {
+    top: 40%;
+  }
 }
 @media all and (max-width: 480px) {
+  .wide .inner{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: flex-start;
+  }
 }
+
+
