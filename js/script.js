@@ -38,8 +38,8 @@ $(document).ready(function () {
   });
 
   /* 슬라이드 */
-  var slide_hero = $(".detail-slide");
-  slide_hero.owlCarousel({
+  var detail_slide = $(".detail-slide");
+  detail_slide.owlCarousel({
     items: 3,
     loop: true,
     nav: true,
@@ -50,17 +50,21 @@ $(document).ready(function () {
     // autoplayHoverPause: false,
   });
 
-  // detail-slide 마우스 오버 효과
-  const items = slide_hero.find(".item");
+// detail-slide 마우스 오버 효과
+  const items = detail_slide.find(".item");
   $.each(items, function (index, item) {
     // 큰 이미지
     const bigPics = $(item).find(".detail-pic img");
     // 색상버튼들
     const colorBalls = $(item).find(".detail-color > div");
+    // 글씨
+    const txts = $(item).find(".detail-info");
     $.each(colorBalls, function (index2, item2) {
       $(item2).mouseenter(function () {
         bigPics.hide();
         $(bigPics[index2]).show();
+        const color = $(this).css("background-color");
+        txts.css("color", color);
       });
     });
   });
