@@ -118,6 +118,12 @@
     transition: 0.6s;
     -webkit-transition: 0.6s;
 }
+.detail .inner .owl-item.center .detail-pic{
+    /* min-width: 500px; */
+}
+.detail .inner .item .detail-pic{
+    min-width: 200px;
+}
 .detail .inner .item-wrap {
     display: inline-block;
     vertical-align: middle;
@@ -208,13 +214,17 @@
     display: none;
 }
 .detail .inner .detail-info {
+    display: inline-block;
+    vertical-align: middle;
     position: absolute;
     left: -420px;
-    top: -18%;
+    top: -17%;
+    width: 540px;
     text-align: left;
+    word-wrap: normal;
+    word-break: keep-all;
     opacity: 0;
-    transform: scale(0.5);
-    /* background-color: rgb(27, 112, 84); */
+    /* transform: scale(0.5); */
 }
 .detail .inner .detail-info.new::before{
     content: "NEW";
@@ -343,12 +353,31 @@
 }
 
 @media all and (max-width: 1680px) {
-}
-@media all and (max-width: 1320px) {
-    
+    .detail .inner .detail-info{
+        left: -100%;
+        padding-left: 140px;
+    }
+    .detail .inner .detail-info.new::before{
+        left: 26%;
+    }
+    .detail .inner .detail-info.new::after{
+        left: 26%;
+    }
 }
 @media all and (max-width: 1280px) {
-    
+    .detail .inner{
+        padding-top: 100px;
+    }
+    .detail .inner .detail-info{
+        left: -100%;
+        padding-left: 130px;
+    }
+    .detail .inner .detail-info.new::before{
+        left: 24%;
+    }
+    .detail .inner .detail-info.new::after{
+        left: 24%;
+    }
 }
 @media all and (max-width: 1024px) {
     .detail .inner{
@@ -357,8 +386,11 @@
     .detail .inner .detail-info{
         left: 23%;
         top: -200px;
-        text-align: center;
         margin-top: 35px;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .detail .inner .detail-pic{
         top: -20%;
@@ -366,7 +398,7 @@
         left: 0;
     }
     .detail .detail-color{
-        top: 380px;
+        bottom: 0;
     }
     .detail .detail-color div{
         min-width: 20px;
@@ -383,8 +415,23 @@
         transform: translateX(-50%);
         left: 50%;
     }
+    .detail .inner .detail-info.new::before{
+        left: 31.5%;
+    }
+    .detail .inner .detail-info.new::after{
+        left: 31.5%;
+    }
 }
 @media all and (max-width: 760px) {
+    .detail .inner .owl-item .detail-color{
+        bottom: -10%;
+    }
+    .detail .inner .owl-item .detail-pic{
+        top: -20%;
+    }
 }
 @media all and (max-width: 480px) {
+    .detail .inner .owl-item .detail-pic{
+        top: -40%;
+    }
 }
