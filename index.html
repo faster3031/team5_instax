@@ -35,7 +35,9 @@
     <script src="js/swiper/swiper.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="js/script.js"></script>
+  
     <link rel="stylesheet" href="css/style.css" />
+
 
     <link
       rel="stylesheet"
@@ -44,7 +46,6 @@
 
     <!-- Owl (jquery 아래 배치 필수.) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -58,7 +59,11 @@
         f.parentNode.insertBefore(j, f);
       })(window, document, "script", "dataLayer", "GTM-KZR7NHXR");
     </script>
-    <!-- End Google Tag Manager -->
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- End Google Tag Manager -->
   </head>
   <body style="background-color: #eee">
     <!-- 스크롤 버튼 -->
@@ -127,7 +132,7 @@
 
       <!-- 비디오 -->
       <section class="movie">
-        <div class="inner">
+        <div class="inner"data-aos="zoom-in-up" data-aos-duration="1000">
           <video muted autoplay loop>
             <source
               src="images/video/INSTAX mini 12 _Fill your world with joy__FUJIFILM.mp4"
@@ -216,8 +221,10 @@
               <img src="images/wide-point.png" alt="" />
               <span class="wide-point-text2">wide film</span>
             </div>
-            <div class="wide-film">
-              <img src="images/pic_example_04.webp" alt="" />
+
+
+            <div class="wide-film"> 
+              <img src="images/film-wide.GIF" alt="">
             </div>
             <div class="wide-camera">
               <img src="images/wide_300_toffee.png" alt="" />
