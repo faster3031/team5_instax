@@ -2,29 +2,27 @@
 @charset "utf-8";
 .mini {
   margin: 0 auto;
-  height: 1080px;
+  height:1080px;
   position: relative;
 }
-.mini::before {
+.mini::before{
   content: "";
   width: 100%;
   height: 100%;
-  background: linear-gradient(#c0adb000, #90deff, #90deff, #c0adb000);
+  background: linear-gradient(#c0adb000,#90deff,#90deff,#c0adb000);
   opacity: 0;
   transition: 1s;
   position: absolute;
   top: 0;
   left: 0;
 }
-.mini-active::before {
+.mini-active::before{
   opacity: 1;
 }
 .mini .inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  align-content: flex-start;
-  /* align-items: flex-end; */
 }
 .mini-circle {
   position: relative;
@@ -40,7 +38,7 @@
 .mini-film {
   position: absolute;
   width: 25%;
-  opacity: 1;
+  opacity: 0;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   transform: translateY(0); /* 초기 위치 */
 }
@@ -48,87 +46,41 @@
 .mini-film img {
   width: 100%;
 }
-
-/* .mini active */
-.mini-active .mini-film {
-  opacity: 1;
-}
-
 .mini-film1 {
-  top: 60%;
+  top: 4%;
   left: 29%;
-  opacity: 0;
-  transition: top 0.5s, opacity 0.5s;
-}
-.mini-film1-active {
-  top: 4% !important;
-  opacity: 1 !important;
 }
 
 .mini-film2 {
-  top: 4%;
-  left: 33%;
-  opacity: 0;
-  transform-origin: 50% 200%;
-  transform: rotate(0deg) translateY(0px); /* 시작 위치와 약간 이동 */
-  /* transition-delay: 0.5s; 딜레이 추가 */
-  transition: top 0.3s, opacity 0.3s, transform 0.3s;
-}
-.mini-film2-active {
-  left: 33% !important;
-  top: 7% !important;
-  transform-origin: 50% 200% !important;
-  opacity: 1 !important;
-  transform: rotate(20deg) translateY(-14px) !important;
+  top: 7%;
+  left: 54%;
+  transform: rotate(20deg) translateY(20px); /* 시작 위치와 약간 이동 */
+  transition-delay: 0.5s; /* 딜레이 추가 */
 }
 
 .mini-film3 {
-  top: 4%;
-  left: 29%;
-  opacity: 0;
-  transform-origin: 50% 200%;
-  transform: rotate(0deg) translateY(0px);
-  transition: top 0.3s, opacity 0.3s, transform 0.3s;
+  top: 20%;
+  left: 72%;
+  transform: rotate(43deg) translateY(40px);
+  transition-delay: 0.8s;
 }
-.mini-film3-active {
-  top: 4%;
-  left: 29%;
-  opacity: 1;
-  transform-origin: 50% 200%;
-  transform: rotate(53deg) translateY(0px);
-}
+
 .mini-film4 {
-  top: 4%;
-  left: 29%;
-  opacity: 0;
-  transform-origin: 40% 200%;
-  transform: rotate(0deg) translateY(0px);
-  transition: top 0.3s, opacity 0.3s, transform 0.3s;
-}
-.mini-film4-active {
-  top: 4%;
-  left: 29%;
-  opacity: 1;
-  transform-origin: 40% 200%;
-  transform: rotate(75deg) translateY(0px);
-  transition: top 0.3s, opacity 0.3s, transform 0.3s;
+  top: 39%;
+  left: 87%;
+  transform: rotate(62deg) translateY(60px);
+  transition-delay: 1.2s;
 }
 
 .mini-film5 {
-  top: 4%;
-  left: 29%;
-  opacity: 0;
-  transform-origin: 33% 200%;
-  transform: rotate(0deg) translateY(0px);
-  transition: top 0.5s, opacity 0.5s, transform 0.5s;
+  top: 63%;
+  left: 94%;
+  transform: rotate(82deg) translateY(80px);
+  transition-delay: 1.5s;
 }
-
-.mini-film5-active {
-  top: 4%;
-  left: 29%;
+/* .mini active */
+.mini-active .mini-film{
   opacity: 1;
-  transform-origin: 33% 200%;
-  transform: rotate(97deg) translateY(0px);
 }
 .mini-camera {
   position: absolute;
@@ -167,11 +119,13 @@
 @media all and (max-width: 1024px) {
 }
 @media all and (max-width: 760px) {
-  .mini .inner {
+  .mini .inner{
     flex-wrap: wrap;
     text-align: center;
+ 
+    
   }
-  .mini-circle {
+  .mini-circle{
     order: 2;
     width: 100%;
   }
@@ -181,15 +135,18 @@
   }
   .mini-text h1 {
     font-size: 5vw;
+   
   }
   .mini-text h4 {
     font-size: 2vw;
   }
 }
 @media all and (max-width: 480px) {
-  .mini .inner {
+  .mini .inner{
     display: flex;
     flex-wrap: wrap;
     align-content: flex-end;
   }
+ 
 }
+
