@@ -161,18 +161,56 @@ window.addEventListener("load", function () {
     });
     AOS.init();
     
-    // 스크롤 시 mini section active 
-    let mini = document.querySelector(".mini");
-    let miniscr = 1700;
-    window.addEventListener("scroll", function () {
-      scb = window.document.documentElement.scrollTop;
-      console.log(miniscr)
-        if (scb > miniscr) {
-          mini.classList.add("mini-active");
-        } else {
-          mini.classList.remove("mini-active");
-        }
-    });
+   // 스크롤 시 mini section active
+  let mini = document.querySelector(".mini");
+  let miniFilm1 = document.querySelector(".mini-film1");
+  let miniFilm2 = document.querySelector(".mini-film2");
+  let miniFilm3 = document.querySelector(".mini-film3");
+  let miniFilm4 = document.querySelector(".mini-film4");
+  let miniFilm5 = document.querySelector(".mini-film5");
+  let miniscr = 2100;
+  let miniMoveFlag = true;
+  window.addEventListener("scroll", function () {
+    scb = window.document.documentElement.scrollTop;
+    console.log(miniscr);
+
+    if (scb >= miniscr) {
+      if (miniMoveFlag) {
+        // mini.classList.add("mini-active");
+        miniFilm1.classList.add("mini-film1-active");
+        setTimeout(() => {
+          miniFilm2.classList.add("mini-film2-active");
+        }, 100);
+        setTimeout(() => {
+          miniFilm3.classList.add("mini-film3-active");
+        }, 200);
+        setTimeout(() => {
+          miniFilm4.classList.add("mini-film4-active");
+        }, 300);
+        setTimeout(() => {
+          miniFilm5.classList.add("mini-film5-active");
+        }, 400);
+        miniMoveFlag = false;
+      }
+    } else {
+      if (!miniMoveFlag) {
+        miniFilm5.classList.remove("mini-film5-active");
+        setTimeout(() => {
+          miniFilm4.classList.remove("mini-film4-active");
+        }, 100);
+        setTimeout(() => {
+          miniFilm3.classList.remove("mini-film3-active");
+        }, 200);
+        setTimeout(() => {
+          miniFilm2.classList.remove("mini-film2-active");
+        }, 300);
+        setTimeout(() => {
+          miniFilm1.classList.remove("mini-film1-active");
+        }, 500);
+        miniMoveFlag = true;
+      }
+    }
+  });
     // 스크롤 시 square section active 
     let square = document.querySelector(".square");
     let squarescr = 2880;
