@@ -198,12 +198,11 @@ window.addEventListener("load", function () {
   let miniFilm3 = document.querySelector(".mini-film3");
   let miniFilm4 = document.querySelector(".mini-film4");
   let miniFilm5 = document.querySelector(".mini-film5");
-  let miniscr = 2100;
+  let miniscr = 1950;
   let miniMoveFlag = true;
   window.addEventListener("scroll", function () {
     scb = window.document.documentElement.scrollTop;
     console.log(miniscr);
-
     if (scb >= miniscr) {
       if (miniMoveFlag) {
         // mini.classList.add("mini-active");
@@ -241,6 +240,9 @@ window.addEventListener("load", function () {
       }
     }
   });
+  // // 스크롤 시 mini section active
+ 
+
   // 스크롤 시 square section active
   let square = document.querySelector(".square");
   let squarescr = 2880;
