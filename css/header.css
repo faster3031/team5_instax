@@ -86,7 +86,21 @@
     font-size: 15px;
   }
 }
-@media all and (max-width: 760px) {
+@media all and (max-width: 768px) {
+}
+@media all and (max-width: 540px) {
+  .header .inner {
+    padding: 0 30px;
+  }
+  .logo img {
+    width: 80px;
+  }
+  .nav ul {
+    gap: 0 40px;
+  }
+  .nav ul li a {
+    font-size: 12px;
+  }
 }
 @media all and (max-width: 480px) {
 }

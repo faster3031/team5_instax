@@ -81,7 +81,35 @@ window.addEventListener("load", function () {
     slidesPerView: 5,
     spaceBetween: 150,
     autoplay: { delay: 0 },
+    breakpoints: {
+      320: {
+        slidesPerView: 2, //브라우저가 768보다 클 때
+        spaceBetween: 150,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,},
+        loop: true,
+      },
+      768: {
+        slidesPerView: 3, //브라우저가 768보다 클 때
+        spaceBetween: 150,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,},
+        loop: true,
+      },
+      1024: {
+        slidesPerView: 5, //브라우저가 1024보다 클 때
+        spaceBetween: 150,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+        },
+        loop: true,
+      },
+    },
   });
+  swiper.autoplay.start();
 
   // top 버튼 스크롤 기능
   const topBtn = document.getElementById("top-btn");
@@ -136,65 +164,63 @@ window.addEventListener("load", function () {
     } else {
       header.classList.remove("header-active");
     }
-});
+  });
 
-    window.addEventListener("scroll", function () {
-        scy = window.document.documentElement.scrollTop;
-        // console.log(scy);
-        if (scy > scActive) {
-            header.classList.add("header-active");
-        } else {
-            header.classList.remove("header-active");
-        }
-    });
-    //  스크롤시 영역 배경 그라디언트
-    let scb = 300;
-    let scr = 400;
-    let movie = document.querySelector(".movie");
-    window.addEventListener("scroll", function () {
-        scb = window.document.documentElement.scrollTop;
-        if (scb > scr) {
-            movie.classList.add("movie-active");
-        } else {
-            movie.classList.remove("movie-active");
-        }
-    });
-    AOS.init();
-    
-    // 스크롤 시 mini section active 
-    let mini = document.querySelector(".mini");
-    let miniscr = 1700;
-    window.addEventListener("scroll", function () {
-      scb = window.document.documentElement.scrollTop;
-      console.log(miniscr)
-        if (scb > miniscr) {
-          mini.classList.add("mini-active");
-        } else {
-          mini.classList.remove("mini-active");
-        }
-    });
-    // 스크롤 시 square section active 
-    let square = document.querySelector(".square");
-    let squarescr = 2880;
-    window.addEventListener("scroll", function () {
-      scb = window.document.documentElement.scrollTop;
-        if (scb > squarescr) {
-          square.classList.add("square-active");
-        } else {
-          square.classList.remove("square-active");
-        }
-    });
-       // 스크롤 시 wide section active 
-       let wide = document.querySelector(".wide");
-       let widescr = 3800;
-       window.addEventListener("scroll", function () {
-         scb = window.document.documentElement.scrollTop;
-           if (scb > widescr) {
-            wide.classList.add("wide-active");
-           } else {
-            wide.classList.remove("wide-active");
-           }
-       });
-       
-   
+  window.addEventListener("scroll", function () {
+    scy = window.document.documentElement.scrollTop;
+    // console.log(scy);
+    if (scy > scActive) {
+      header.classList.add("header-active");
+    } else {
+      header.classList.remove("header-active");
+    }
+  });
+  //  스크롤시 영역 배경 그라디언트
+  let scb = 300;
+  let scr = 400;
+  let movie = document.querySelector(".movie");
+  window.addEventListener("scroll", function () {
+    scb = window.document.documentElement.scrollTop;
+    if (scb > scr) {
+      movie.classList.add("movie-active");
+    } else {
+      movie.classList.remove("movie-active");
+    }
+  });
+  AOS.init();
+
+  // 스크롤 시 mini section active
+  let mini = document.querySelector(".mini");
+  let miniscr = 1700;
+  window.addEventListener("scroll", function () {
+    scb = window.document.documentElement.scrollTop;
+    console.log(miniscr);
+    if (scb > miniscr) {
+      mini.classList.add("mini-active");
+    } else {
+      mini.classList.remove("mini-active");
+    }
+  });
+  // 스크롤 시 square section active
+  let square = document.querySelector(".square");
+  let squarescr = 2880;
+  window.addEventListener("scroll", function () {
+    scb = window.document.documentElement.scrollTop;
+    if (scb > squarescr) {
+      square.classList.add("square-active");
+    } else {
+      square.classList.remove("square-active");
+    }
+  });
+  // 스크롤 시 wide section active
+  let wide = document.querySelector(".wide");
+  let widescr = 3800;
+  window.addEventListener("scroll", function () {
+    scb = window.document.documentElement.scrollTop;
+    if (scb > widescr) {
+      wide.classList.add("wide-active");
+    } else {
+      wide.classList.remove("wide-active");
+    }
+  });
 });
