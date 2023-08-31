@@ -19,7 +19,7 @@
     min-height: 800px;
     /* background-color: burlywood; */
 }
-.detail .inner .detail-wrap .circle {
+/* .detail .inner .detail-wrap .circle {
     position: absolute;
     transform: translate(-50%, -50%);
     border-radius: 300px;
@@ -37,20 +37,17 @@
     height: 250px;
     top: 70%;
     right: -110px;
-}
+} */
 .detail .inner .detail-slide {
     margin: 0 auto;
-    width: 1440px;
+    /* width: 1440px; */
     height: 800px;
 }
-/* .detail .inner .owl-nav {
-    display: block;
-} */
 .detail .inner .owl-nav button {
     display: inline-block;
     vertical-align: middle;
     position: absolute;
-    bottom: 50%;
+    bottom: 56%;
     width: 60px;
     height: 60px;
     margin-bottom: -30px;
@@ -77,16 +74,14 @@
     display: none;
 }
 .detail .inner .owl-nav .owl-prev {
-    left: 50%;
-    margin-left: -280px;
+    left: 0;
 }
 .detail .inner .owl-nav .owl-prev:before {
     margin-left: -4px;
     transform: rotate(-135deg);
 }
 .detail .inner .owl-nav .owl-next {
-    right: 50%;
-    margin-right: -300px;
+    right: 0;
 }
 .detail .inner .owl-nav .owl-next:before {
     margin-left: -8px;
@@ -111,11 +106,14 @@
 .detail .inner .owl-item.center .detail-color {
     opacity: 1;
 }
+/* 슬라이드 크기 조절(미리보기 크기) */
 .detail .inner .item {
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    width: 240px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14vw;
     height: 800px;
     transition: 0.6s;
     -webkit-transition: 0.6s;
@@ -133,15 +131,13 @@
 }
 .detail .inner .detail-pic {
     position: absolute;
-    left: 95px;
     right: 0;
-    bottom: 110px;
+    bottom: 50px;
     z-index: 2;
     overflow: hidden;
     width: 100%;
     height: auto;
-    min-height: 280px;
-    aspect-ratio: 1/1.18;
+    aspect-ratio: 1/1.11;
     transition: 0.3s;
 }
 .detail .inner .detail-pic img {
@@ -153,50 +149,57 @@
     height: auto;
     transition: 0.3s;
 }
-.detail .inner .detail-pic.camera {
-    min-height: 240px;
-    aspect-ratio: 1/1;
-}
 .detail .inner .detail-color{
     border-radius: 50px;
     position: absolute;
     transform: translate(-50%, -50%);
-    bottom: 40px;
+    bottom: 0px;
     left: 50%;
     display: flex;
-    gap: 20px;
+    gap: 1vw;
 }
 .detail .inner .detail-color > div{
-    width: 40px;
-    height: 40px;
+    width: 2vw;
+    height: 2vw;
     border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.detail .inner .detail-color > div:hover{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 .detail .inner .item .detail-color .purple{
-    background-color: #c1adfb;
+    background-color: #BFB2CE;
 }
 .detail .inner .item .detail-color .green{
-    background-color: yellowgreen;
+    background-color: #C1DAD4;
 }
 .detail .inner .item .detail-color .white{
-    background-color: #ddd;
+    background-color: #C4CBD5;
 }
 .detail .inner .item .detail-color .pink{
-    background-color: pink;
+    background-color: #DDB7C2;
 }
 .detail .inner .item .detail-color .blue{
-    background-color: skyblue;
+    background-color: #B3C8E7;
 }
 .detail .inner .item .detail-color .black{
-    background-color: black;
+    background-color: #28292B;
 }
 .detail .inner .item .detail-color .red{
-    background-color: red;
+    background-color: #A33945;
 }
 .detail .inner .item .detail-color .brown{
-    background-color: brown;
+    background-color: #774027;
 }
 .detail .inner .item .detail-color .orange{
-    background-color: rgb(212, 95, 40);
+    background-color: #AC6F56;
+}
+.detail .inner .item .detail-color .chalk{
+    background-color: #D6D4D3;
+}
+.detail .inner .item .detail-color .toffee{
+    background-color: #D1ABA1;
 }
 .detail .inner .item:first-child .camera img:nth-child(2),
 .detail .inner .item:first-child .camera img:nth-child(3),
@@ -207,10 +210,8 @@
 .detail .inner .detail-info {
     position: absolute;
     left: -420px;
-    top: 0;
-    width: 410px;
+    top: -18%;
     text-align: left;
-    transition: 0.9s;
     opacity: 0;
     transform: scale(0.5);
     /* background-color: rgb(27, 112, 84); */
@@ -232,7 +233,7 @@
     color: #fff;
 }
 .detail .inner .detail-info .detail-title {
-    font-size: 60px;
+    font-size: 3.5vw;
     font-weight: 700;
 }
 .detail .inner .detail-info > a.btn {
@@ -257,12 +258,19 @@
 .detail .inner .owl-item.active.center {
     opacity: 1;
 }
+/* 센터 카메라 크기 */
 .detail .inner .owl-item.active.center .item {
-    width: 600px;
-    margin-left: -60px;
+    position: relative;
+    width: 120%;
+    /* margin-left: -80px; */
 }
 .detail .inner .owl-item.active.center .item-wrap {
-    bottom: 100px;
+    /* bottom: 100px; */
+    top: 50%;
+    transform: translateY(-50%);
+}
+.detail .inner .owl-item.active.center .camera{
+    left: -10%;
 }
 .detail .inner .owl-item.active.center .detail-info {
     opacity: 1;
@@ -323,12 +331,58 @@
     display: block;
 }
 
+.detail .inner .owl-item.active.center .item .detail-color{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+}
+.detail .inner .owl-item.active.center .item .detail-pic{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+}
 
 @media all and (max-width: 1680px) {
 }
+@media all and (max-width: 1320px) {
+    
+}
 @media all and (max-width: 1280px) {
+    
 }
 @media all and (max-width: 1024px) {
+    .detail .inner{
+        padding-top: 70px;
+    }
+    .detail .inner .detail-info{
+        left: 23%;
+        top: -200px;
+        text-align: center;
+        margin-top: 35px;
+    }
+    .detail .inner .detail-pic{
+        top: -20%;
+        min-width: 365px;
+        left: 0;
+    }
+    .detail .detail-color{
+        top: 380px;
+    }
+    .detail .detail-color div{
+        min-width: 20px;
+        min-height: 20px;
+    }
+    .detail .owl-item.active img{
+        opacity: 0;
+    }
+    .detail .owl-item.active.center img{
+        opacity: 1;
+    }
+    .detail .inner .owl-item.active.center .item .detail-info{
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+    }
 }
 @media all and (max-width: 760px) {
 }
