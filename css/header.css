@@ -86,6 +86,9 @@
     font-size: 15px;
   }
 }
+
+/* mobile */
+
 @media all and (max-width: 768px) {
 }
 @media all and (max-width: 540px) {

@@ -45,6 +45,8 @@ video {
     height: 50%;
   }
 }
+
+/* mobile */
 @media all and (max-width: 768px) {
   video {
     width: 90%;

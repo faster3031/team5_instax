@@ -59,10 +59,14 @@ $(document).ready(function () {
     const colorBalls = $(item).find(".detail-color > div");
     // 글씨
     const txts = $(item).find(".detail-info");
+    // 색상이름
+    const colorNames = $(item).find(".detail-info .color-name p");
     $.each(colorBalls, function (index2, item2) {
       $(item2).mouseenter(function () {
         bigPics.hide();
         $(bigPics[index2]).show();
+        colorNames.hide();
+        $(colorNames[index2]).show();
         const color = $(this).css("background-color");
         txts.css("color", color);
       });

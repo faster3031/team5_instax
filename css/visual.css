@@ -166,6 +166,7 @@
     left:55%;
   }
 }
+/* mobile */
 @media all and (max-width: 768px) {
   .sample-slider .swiper-wrapper {
     transition-timing-function: linear;
