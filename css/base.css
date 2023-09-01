@@ -28,6 +28,6 @@ body {
   word-break: keep-all;
   color: #000;
   font-weight: 400;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   min-width: 480px;
 }

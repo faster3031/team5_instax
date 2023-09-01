@@ -1,14 +1,20 @@
 /* 배너 */
 .banner {
-    margin-top: 100px;
+    margin: 100px 0;
 }
 .banner .inner{
     display: flex;
 }
+.banner-wrap{
+    width: 100%;
+    display: flex;
+    border-radius: 5vw;
+    overflow: hidden;
+}
 .banner-box{
     position: relative;
     width: 50%;
-    height: 600px;
+    aspect-ratio: 1 / 0.8;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,14 +22,14 @@
     gap: 20px;
 }
 .banner-title{
-    width: 170px;
-    height: 50px;
+    padding: 7px 40px;
     border-radius: 50px;
     text-align: center;
     line-height: 50px;
     font-size: 30px;
     font-weight: 700;
     color: #fff;
+    margin-bottom: 15px;
 }
 .banner .banner-event-title{
     background-color: #707070;
@@ -34,34 +40,76 @@
 .banner .banner-event{
     background-color: #D3D3D3;
 }
-.banner .banner-event img{
-    width: 60%;
-}
 .banner .banner-set{
     background-color: #C1ADFB;
 }
+.banner .banner-img{
+    width: 500px;
+    height: 300px;
+    text-align: center;
+}
+.banner img{
+    height: 100%;
+}
 .banner .banner-set-txt{
     font-size: 20px;
-    border: 500;
+    font-weight: 700;
 }
 .banner-button{
-    position: absolute;
-    bottom: 40px;
     background-color: #fff;
     padding: 10px 30px;
     border-radius: 50px;
     font-weight: 700;
+    transition: all 0.3s;
 }
-
+.banner-button:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    color: #fff;
+}
+.banner-event .banner-button:hover{
+    background-color: #707070;
+}
+.banner-set .banner-button:hover{
+    background-color: #9571ff;
+}
 
 @media all and (max-width: 1680px) {
 }
-
 @media all and (max-width: 1280px) {
+    .banner-title{
+        font-size: 25px;
+        padding: 5px 30px;
+        margin-bottom: 0;
+    }
+    .banner .banner-set-txt{
+        font-size: 18px;
+        font-weight: 700;
+    }
 }
 @media all and (max-width: 1024px) {
+    .banner-title{
+        font-size: 20px;
+        padding: 1px 30px;
+    }
+    .banner .banner-img{
+        width: 500px;
+        height: 250px;
+        text-align: center;
+    }
 }
-@media all and (max-width: 760px) {
+/* mobile */
+@media all and (max-width: 768px) {
+    .banner-wrap{
+        flex-direction: column;
+    }
+    .banner-box{
+        width: 100%;
+        height: auto;
+    }
+    .banner-button{
+        padding: 5px 20px;
+        font-size: 16px;
+    }
 }
 @media all and (max-width: 480px) {
 }
