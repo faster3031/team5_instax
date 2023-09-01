@@ -7,7 +7,7 @@
 </head>
 <body>
   <h1>윈도우 객체 속성 예제</h1>
-  <button onclick="createWindow(eventhtml)">윈도우 생성
+  <button onclick="createWindow()">윈도우 생성
   </button>
   <button onclick="closeWindow()">윈도우 닫기</button>
   
@@ -15,7 +15,7 @@
       let newWindow;
       function createWindow(){
           // 윈도우 객체 생성
-          newWindow = window.open("", "", "width=1000, height=1200");
+          newWindow = window.open("event.html", "", "width=1000, height=1200");
           // 윈도우 객체 속성 설정
           newWindow.document.title = "새로운 윈도우";
           newWindow.document.body.style.backgroundColor = "#F0F0F0";

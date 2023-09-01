@@ -25,11 +25,12 @@
 .footer-left img {
   width: 100px;
   height: 30px;
+  margin-bottom: 20px;
 }
 .sns h2 {
-  font-size: 18px;
-  font-weight: 700;
-  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
 }
 .footer-right {
   padding: 0 20px;
@@ -42,6 +43,7 @@
   height: 250px;
 }
 .footer-right h2 {
+  margin-bottom: 10px;
   font-weight: bold;
 }
 .footer-right ul li {
