@@ -199,13 +199,16 @@ top: -18%;
     display: flex;
     text-align: center;
     flex-direction: column;
-    margin-top: 35%;
   }
   .square-point img{
     width: 90%;
     top:2%;
     right: 63%;
     z-index: 99;
+  }
+  .square-circle {
+    width: 70%;
+    
   }
   .square-point2 img {
     width: 80%;
@@ -217,12 +220,19 @@ top: -18%;
     font-size: 10px;
     left: -11px;
   }
+  .square-text h1 {
+    font-size: 30px;
+  }
+  .square-text h4 {
+    font-size: 13px;
+    margin-bottom: 40px;
+  }
   .square-point-text2{
     color: #000000;
     font-size: 10px;
    font-weight: 400;
    top: -70%;
-   left: 6%;
+   left: 1%;
   }
 }
 
