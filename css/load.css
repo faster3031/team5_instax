@@ -24,7 +24,7 @@
 }
 
 .loader span {
-	animation: moving 2s linear infinite;
+	animation: moving 2.5s linear infinite;
 	animation-delay: calc((var(--n) - 10) * 0.2s);
 	position: absolute;
 	height: 3em;
