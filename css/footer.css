@@ -78,7 +78,8 @@
     font-size: 14px;
   }
 }
-@media all and (max-width: 760px) {
+/* mobile */
+@media all and (max-width: 768px) {
 }
 @media all and (max-width: 480px) {
 }
