@@ -29,7 +29,9 @@
   border-radius: 500px;
   background-color: #fff;
   left: 10%; 
-  background: url("../images/film-wide.GIF") no-repeat;
+  background: url("../images/wide-background.jpeg") no-repeat;
+  box-shadow: 0 15px 24px rgba(0, 0, 0, 0.22), 0 19px 76px rgba(0, 0, 0, 0.3) ;
+
   background-size: cover;
 }
 .wide-circle::after {
@@ -38,36 +40,51 @@
   padding-bottom: 100%;
   left: 50%;  
 }
-.wide-point img{
-  position: absolute;
-  left: 34%;
-  bottom: -4%;
-  z-index: 999;
-  
+.wide-point{
+    position: absolute;
+    display: flex;
+    align-content: space-between;
+    right: 6vw;
+    bottom: -2vw;
+    z-index: 999;
 }
-.wide-point2 img{
+.wide-point2{
   position: absolute;
-  top: -1%;
+  width: 10%;
+  top: 10%;
   left: -9%;
   z-index: 1;
+  min-width: 50px;
+}
+.wide-point{
+  width: 50%;
+
+}
+.wide-point img{
+  width: 40%;
+  z-index: 999;
+}
+.wide-point2 img{
+width: 100%;
+  
 }
 .wide-point-text {
-  width: 50%;
   position: absolute;
+  bottom: -10px;
+  right: 60px;
   color: #000000;
-  font-size: 1.3vw;
+  font-size: 20px;
   font-weight: 400;
-  top: 102%;
-  right: -17%;
+  /* background-color: blueviolet; */
 }
 .wide-point-text2 {
-  width: 50%;
   position: absolute;
   color: #000000;
-  font-size: 1.3vw;
+  font-size: 20px;
   font-weight: 400;
-  top: -7%;
-  left: -13%;
+  top: -25%;
+    left: -65%;
+    width: 100px;
 }
 
 .wide-camera {
@@ -77,6 +94,7 @@
   left: -31%;
   transform: translateY(61%);
   z-index: 99;
+  
 }
 .wide-camera img {
 width: 100%;
@@ -90,6 +108,8 @@ width: 100%;
 }
 .wide-film img{
   width: 100%;
+  box-shadow:   0 15px 24px rgba(0, 0, 0, 0.22), 0 19px 76px rgba(0, 0, 0, 0.3) ;
+  
 }
 .wide-text {
   top: 137px;
@@ -143,28 +163,17 @@ width: 100%;
   .wide-text h4 {
     font-size: 2vw;
   }
-  .wide-point,
-  .wide-point2 {
-    position: static;
-    transform: none;
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-   
+  .wide-point{
+    left: 30%;
   }
-  .wide-point-text,
+  .wide-point-text {
+    font-size: 15px;
+    
+  }
   .wide-point-text2 {
-    font-size: 3vw;
-    display: block;
-    margin-top: 5px;
-    right: 72%;
+    font-size: 15px;
   }
-  .wide-point-text2{
-    left: -32%;
-  }
-  .wide-point-text{
-    left: 63%;
-  }
+  
 }
 @media all and (max-width: 480px) {
   .wide .inner{
@@ -173,6 +182,23 @@ width: 100%;
     justify-content: flex-start;
     align-content: flex-start;
   }
-}
+  .wide-point img{
+    width: 70%;
+  }
+  .wide-point-text {
+    font-size: 10px;
+   right: -1%;
+   left: 149px;
+  }
+  .wide-point-text2 {
+    font-size: 10px;
+   
+    
+  }
+  
+ 
+  }
+ 
+
 
 

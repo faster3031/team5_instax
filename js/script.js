@@ -50,7 +50,7 @@ $(document).ready(function () {
     // autoplayHoverPause: false,
   });
 
-// detail-slide 마우스 오버 효과
+  // detail-slide 마우스 오버 효과
   const items = detail_slide.find(".item");
   $.each(items, function (index, item) {
     // 큰 이미지
@@ -85,7 +85,37 @@ window.addEventListener("load", function () {
     slidesPerView: 5,
     spaceBetween: 150,
     autoplay: { delay: 0 },
+    breakpoints: {
+      320: {
+        slidesPerView: 2, //브라우저가 768보다 클 때
+        spaceBetween: 150,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+        },
+        loop: true,
+      },
+      768: {
+        slidesPerView: 3, //브라우저가 768보다 클 때
+        spaceBetween: 150,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+        },
+        loop: true,
+      },
+      1024: {
+        slidesPerView: 5, //브라우저가 1024보다 클 때
+        spaceBetween: 150,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+        },
+        loop: true,
+      },
+    },
   });
+  swiper.autoplay.start();
 
   // top 버튼 스크롤 기능
   const topBtn = document.getElementById("top-btn");
@@ -140,65 +170,124 @@ window.addEventListener("load", function () {
     } else {
       header.classList.remove("header-active");
     }
-});
+  });
 
-    window.addEventListener("scroll", function () {
-        scy = window.document.documentElement.scrollTop;
-        // console.log(scy);
-        if (scy > scActive) {
-            header.classList.add("header-active");
-        } else {
-            header.classList.remove("header-active");
-        }
-    });
-    //  스크롤시 영역 배경 그라디언트
-    let scb = 300;
-    let scr = 400;
-    let movie = document.querySelector(".movie");
-    window.addEventListener("scroll", function () {
-        scb = window.document.documentElement.scrollTop;
-        if (scb > scr) {
-            movie.classList.add("movie-active");
-        } else {
-            movie.classList.remove("movie-active");
-        }
-    });
-    AOS.init();
-    
-    // 스크롤 시 mini section active 
-    let mini = document.querySelector(".mini");
-    let miniscr = 1700;
-    window.addEventListener("scroll", function () {
-      scb = window.document.documentElement.scrollTop;
-      console.log(miniscr)
-        if (scb > miniscr) {
-          mini.classList.add("mini-active");
-        } else {
-          mini.classList.remove("mini-active");
-        }
-    });
-    // 스크롤 시 square section active 
-    let square = document.querySelector(".square");
-    let squarescr = 2880;
-    window.addEventListener("scroll", function () {
-      scb = window.document.documentElement.scrollTop;
-        if (scb > squarescr) {
-          square.classList.add("square-active");
-        } else {
-          square.classList.remove("square-active");
-        }
-    });
-       // 스크롤 시 wide section active 
-       let wide = document.querySelector(".wide");
-       let widescr = 3800;
-       window.addEventListener("scroll", function () {
-         scb = window.document.documentElement.scrollTop;
-           if (scb > widescr) {
-            wide.classList.add("wide-active");
-           } else {
-            wide.classList.remove("wide-active");
-           }
-       });
+  window.addEventListener("scroll", function () {
+    scy = window.document.documentElement.scrollTop;
+    // console.log(scy);
+    if (scy > scActive) {
+      header.classList.add("header-active");
+    } else {
+      header.classList.remove("header-active");
+    }
+  });
+  //  스크롤시 영역 배경 그라디언트
+  let scb = 300;
+  let scr = 400;
+  let movie = document.querySelector(".movie");
+  window.addEventListener("scroll", function () {
+    scb = window.document.documentElement.scrollTop;
+    if (scb > scr) {
+      movie.classList.add("movie-active");
+    } else {
+      movie.classList.remove("movie-active");
+    }
+  });
+  AOS.init();
+
+  // 스크롤 시 mini section active
+  let mini = document.querySelector(".mini");
+  let miniFilm1 = document.querySelector(".mini-film1");
+  let miniFilm2 = document.querySelector(".mini-film2");
+  let miniFilm3 = document.querySelector(".mini-film3");
+  let miniFilm4 = document.querySelector(".mini-film4");
+  let miniFilm5 = document.querySelector(".mini-film5");
+  let miniscr =2000;
+  let miniMoveFlag = true;
+  window.addEventListener("scroll", function () {
+    scb = window.document.documentElement.scrollTop;
+    console.log(miniscr);
+    if (scb >= miniscr) {
+      if (miniMoveFlag) {
        
-   
+        miniFilm1.classList.add("mini-film1-active");
+        setTimeout(() => {
+          miniFilm2.classList.add("mini-film2-active");
+        }, 100);
+        setTimeout(() => {
+          miniFilm3.classList.add("mini-film3-active");
+        }, 200);
+        setTimeout(() => {
+          miniFilm4.classList.add("mini-film4-active");
+        }, 300);
+        setTimeout(() => {
+          miniFilm5.classList.add("mini-film5-active");
+        }, 350);
+        miniMoveFlag = false;
+      }
+    } else {
+      if (!miniMoveFlag) {
+        miniFilm5.classList.remove("mini-film5-active");
+        setTimeout(() => {
+          miniFilm4.classList.remove("mini-film4-active");
+        }, 100);
+        setTimeout(() => {
+          miniFilm3.classList.remove("mini-film3-active");
+        }, 200);
+        setTimeout(() => {
+          miniFilm2.classList.remove("mini-film2-active");
+        }, 300);
+        setTimeout(() => {
+          miniFilm1.classList.remove("mini-film1-active");
+        }, 600);
+        miniMoveFlag = true;
+      }
+    }
+  });
+ // 스크롤 시 mini section active
+ let mini2 = document.querySelector(".mini");
+ let mini2scr = 1990;
+ window.addEventListener("scroll", function () {
+   scb = window.document.documentElement.scrollTop;
+   console.log(mini2scr);
+   if (scb > mini2scr) {
+     mini2.classList.add("mini-active");
+   } else {
+     mini2.classList.remove("mini-active");
+   }
+ });
+
+  // 스크롤 시 square section active
+  let square = document.querySelector(".square");
+  let squarescr = 2880;
+  window.addEventListener("scroll", function () {
+    scb = window.document.documentElement.scrollTop;
+    if (scb > squarescr) {
+      square.classList.add("square-active");
+    } else {
+      square.classList.remove("square-active");
+    }
+  });
+  
+  // 스크롤 시 wide section active
+  let wide = document.querySelector(".wide");
+  let widescr = 3800;
+  window.addEventListener("scroll", function () {
+    scb = window.document.documentElement.scrollTop;
+    if (scb > widescr) {
+      wide.classList.add("wide-active");
+    } else {
+      wide.classList.remove("wide-active");
+    }
+  });
+
+  window.addEventListener("scroll", function () {
+    scy = window.document.documentElement.scrollTop;
+    // console.log(scy);
+    if (scy > scActive) {
+      header.classList.add("header-active");
+    } else {
+      header.classList.remove("header-active");
+    }
+  });
 });

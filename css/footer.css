@@ -72,14 +72,36 @@
 }
 @media all and (max-width: 1024px) {
   .footer .inner {
-    padding: 0 50px;
+    padding: 0 20px;
   }
   .footer-bottom ul li {
     font-size: 14px;
   }
 }
+
 /* mobile */
 @media all and (max-width: 768px) {
+}
+@media all and (max-width: 650px) {
+  .footer .inner {
+    padding: 0 20px;
+  }
+  .footer-left img{
+    margin-bottom: 20px;
+  }
+  .footer-left {
+    width: 100%;
+    text-align: center;
+  }
+  .footer-left ul li{
+    padding: 10px 0px;
+  }
+  .footer-right{
+    display: none;
+  }
+  .footer-bottom ul li{
+    font-size: 12px;
+  }
 }
 @media all and (max-width: 480px) {
 }
