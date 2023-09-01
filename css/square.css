@@ -26,13 +26,16 @@
   position: relative;
   width: 43%;
   border-radius: 500px;
-  background-color: #fff;
+  background-color: #fff; box-shadow: 0 15px 24px rgba(0, 0, 0, 0.22), 0 19px 76px rgba(0, 0, 0, 0.3);
 }
 .square-circle::after{
    content: "";
    display: block;
    padding-bottom: 100%;
   
+}
+.square-point, .square-point2{
+  width: 50%;
 }
   .square-point img{
     position: absolute;
@@ -48,25 +51,23 @@
   }
 
 .square-point-text{
-   width: 50%;
     position: absolute;
     color: #000000;
     font-size: 1.3vw;
    font-weight: 400;
    top: 25%;
-   right: 70%;
+   left: -20%;
   }
   .square-point-text2{
-    width: 50%;
     position: absolute;
     color: #000000;
     font-size: 1.3vw;
    font-weight: 400;
-   top: 64%;
-   right:75%;
+   top: 62%;
+   left: -24%;
   }
   .square-camera {
-  position: absolute;
+    position: absolute;
     width: 84%;
     top: 20%;
     left: 50%;
@@ -76,7 +77,19 @@
   .square-camera img {
     width: 100%;
   }
-  .square-text{
+  
+.square-film{
+  position: absolute;
+  top: 30%;
+  left: 53%;
+  transform: translateX(-50%);
+  transition-duration: 1s;
+}
+.square-film img{
+  width: 100%;
+  
+}
+.square-text{
     top: 137px;
     right: 102%;
     color: #fff;
@@ -95,16 +108,7 @@
   font-weight: 400;
   color: #ffffff;
 }
-.square-film{
-  position: absolute;
-  top: 30%;
-  left: 53%;
-  transform: translateX(-50%);
-  transition-duration: 1s;
-}
-.square-film img{
-  width: 100%;
-}
+
 /* .square active */
 .square-active .square-film {
 top: -18%;
@@ -122,13 +126,8 @@ top: -18%;
 @media (max-width: 760px) {
   .square .inner{
     display: flex;
-    margin-top: 170px;
     text-align: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
     flex-direction: column;
-    align-items: stretch;
-    align-content: center;
   }
   .square {
     height: auto;
@@ -139,21 +138,33 @@ top: -18%;
     top: 50%;
     margin: 27%;
   }
-  .square-point,
-  .square-point2 {
-    position: static;
-    transform: none;
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-   
+  .square-point-text{
+    position: absolute;
+    color: #000000;
+    font-size: 1.3vw;
+   font-weight: 400;
+   top: 17%;
+   left: 0%;
   }
-  .square-point-text,
-  .square-point-text2 {
-    font-size: 3vw;
-    display: block;
-    margin-top: 5px;
-    right: 72%;
+  .square-point-text2{
+    position: absolute;
+    color: #000000;
+    font-size: 1.3vw;
+   font-weight: 400;
+   top: 64%;
+   left: -5%;
+  }
+  .square-point img{
+    position: absolute;
+    top:2%;
+    right: 63%;
+    z-index: 99;
+  }
+  .square-point2 img {
+    position: absolute; 
+    top:68%;
+    right: 73%;
+   z-index: 999;
   }
   .square-camera {
     top: 20%;
@@ -174,11 +185,33 @@ top: -18%;
   }
 }
 @media all and (max-width: 480px) {
-  .wide .inner{
+  .square .inner{
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    align-content: flex-start;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 35%;
+  }
+  .square-point img{
+    width: 30%;
+    position: absolute;
+    top:2%;
+    right: 63%;
+    z-index: 99;
+  }
+  .square-point2 img {
+    width: 30%;
+    position: absolute; 
+    top:68%;
+    right: 73%;
+   z-index: 999;
+  }
+  .square-point-text2{
+    position: absolute;
+    color: #000000;
+    font-size: 1.3vw;
+   font-weight: 400;
+   top: 62%;
+   left: -5%;
   }
 }
 

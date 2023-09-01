@@ -198,14 +198,14 @@ window.addEventListener("load", function () {
   let miniFilm3 = document.querySelector(".mini-film3");
   let miniFilm4 = document.querySelector(".mini-film4");
   let miniFilm5 = document.querySelector(".mini-film5");
-  let miniscr = 1950;
+  let miniscr =2000;
   let miniMoveFlag = true;
   window.addEventListener("scroll", function () {
     scb = window.document.documentElement.scrollTop;
     console.log(miniscr);
     if (scb >= miniscr) {
       if (miniMoveFlag) {
-        // mini.classList.add("mini-active");
+       
         miniFilm1.classList.add("mini-film1-active");
         setTimeout(() => {
           miniFilm2.classList.add("mini-film2-active");
@@ -218,7 +218,7 @@ window.addEventListener("load", function () {
         }, 300);
         setTimeout(() => {
           miniFilm5.classList.add("mini-film5-active");
-        }, 400);
+        }, 350);
         miniMoveFlag = false;
       }
     } else {
@@ -235,13 +235,23 @@ window.addEventListener("load", function () {
         }, 300);
         setTimeout(() => {
           miniFilm1.classList.remove("mini-film1-active");
-        }, 500);
+        }, 600);
         miniMoveFlag = true;
       }
     }
   });
-  // // 스크롤 시 mini section active
- 
+ // 스크롤 시 mini section active
+ let mini2 = document.querySelector(".mini");
+ let mini2scr = 1990;
+ window.addEventListener("scroll", function () {
+   scb = window.document.documentElement.scrollTop;
+   console.log(mini2scr);
+   if (scb > mini2scr) {
+     mini2.classList.add("mini-active");
+   } else {
+     mini2.classList.remove("mini-active");
+   }
+ });
 
   // 스크롤 시 square section active
   let square = document.querySelector(".square");
@@ -254,6 +264,7 @@ window.addEventListener("load", function () {
       square.classList.remove("square-active");
     }
   });
+  
   // 스크롤 시 wide section active
   let wide = document.querySelector(".wide");
   let widescr = 3800;

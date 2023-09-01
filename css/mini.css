@@ -31,6 +31,8 @@
   width: 43%;
   border-radius: 500px;
   background-color: #fff;
+  /* box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16); */
+  box-shadow: 0 15px 24px rgba(0, 0, 0, 0.22), 0 19px 76px rgba(0, 0, 0, 0.3);
 }
 .mini-circle::after {
   content: "";
@@ -52,6 +54,7 @@
 /* .mini active */
 .mini-active .mini-film {
   opacity: 1;
+  
 }
 
 .mini-film1 {
@@ -79,8 +82,9 @@
   top: 7% !important;
   transform-origin: 50% 200% !important;
   opacity: 1 !important;
-  transform: rotate(20deg) translateY(-14px) !important;
+  transform: rotate(22deg) translateY(-17px) !important;
 }
+
 
 .mini-film3 {
   top: 4%;
@@ -88,14 +92,14 @@
   opacity: 0;
   transform-origin: 50% 200%;
   transform: rotate(0deg) translateY(0px);
-  transition: top 0.3s, opacity 0.3s, transform 0.3s;
+  transition: top 0.3s, opacity 0.4s, transform 0.4s;
 }
 .mini-film3-active {
   top: 4%;
   left: 29%;
   opacity: 1;
   transform-origin: 50% 200%;
-  transform: rotate(53deg) translateY(0px);
+  transform: rotate(51deg) translateY(0px);
 }
 .mini-film4 {
   top: 4%;
@@ -103,7 +107,7 @@
   opacity: 0;
   transform-origin: 40% 200%;
   transform: rotate(0deg) translateY(0px);
-  transition: top 0.3s, opacity 0.3s, transform 0.3s;
+  transition: top 0.3s, opacity 0.5s, transform 0.3s;
 }
 .mini-film4-active {
   top: 4%;
@@ -111,7 +115,7 @@
   opacity: 1;
   transform-origin: 40% 200%;
   transform: rotate(75deg) translateY(0px);
-  transition: top 0.3s, opacity 0.3s, transform 0.3s;
+
 }
 
 .mini-film5 {
@@ -120,7 +124,7 @@
   opacity: 0;
   transform-origin: 33% 200%;
   transform: rotate(0deg) translateY(0px);
-  transition: top 0.5s, opacity 0.5s, transform 0.5s;
+  transition: top 0.5s, opacity 0.5s, transform 0.3s;
 }
 
 .mini-film5-active {
@@ -128,7 +132,7 @@
   left: 29%;
   opacity: 1;
   transform-origin: 33% 200%;
-  transform: rotate(97deg) translateY(0px);
+  transform: rotate(101deg) translateY(-12px);
 }
 .mini-camera {
   position: absolute;
