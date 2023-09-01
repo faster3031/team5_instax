@@ -1,5 +1,6 @@
 //  dom (html 태그 로딩 완료시 실행)
 $(document).ready(function () {
+
   // 클릭시 점멸
   function flash(e) {
     $(".flash")
@@ -68,22 +69,44 @@ $(document).ready(function () {
       });
     });
   });
+  
 });
+// 로딩 화면 구현
+var _showPage = function() {
+  var loader = $("div.loader");
+  var loaderwrap = $("div.loader-wrap");
+  var wrap = $("div.wrap");
+  loader.css("display", "none");
+  loaderwrap.css("display","none")
+  wrap.addClass("visible");   // 메인 페이지 서서히 나타남
+  
+};
+// 페이지 로딩이 완료되면 일정 시간 후에 _showPage 함수를 호출하여 화면 전환
+$(window).on("load", function() {
+  // 로딩 화면을 보여주기 위한 시간(밀리초) 설정
+  var loadingDuration = 2000; // 예: 3000 밀리초 = 3초
 
+  // 로딩 화면을 표시한 후에 _showPage 함수를 호출하는 지연 실행
+  setTimeout(function() {
+    _showPage();
+  }, loadingDuration);
+});
 // 멀티미디어 리소스 로딩 완료 후 실행
 window.onload = function () {};
 
-// swiper
+
 window.addEventListener("load", function () {
+  // swiper
   const swiper = new Swiper(".sample-slider", {
     loop: true,
     speed: 1000,
     slidesPerView: 5,
     spaceBetween: 150,
     autoplay: { delay: 0 },
+    disableOnInteraction: false,
     breakpoints: {
       320: {
-        slidesPerView: 2, //브라우저가 768보다 클 때
+        slidesPerView: 2, //브라우저가 320보다 클 때
         spaceBetween: 150,
         autoplay: {
           delay: 0,
@@ -92,6 +115,15 @@ window.addEventListener("load", function () {
         loop: true,
       },
       768: {
+        slidesPerView: 3, //브라우저가 768보다 클 때
+        spaceBetween: 150,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+        },
+        loop: true,
+      },
+      890: {
         slidesPerView: 3, //브라우저가 768보다 클 때
         spaceBetween: 150,
         autoplay: {
@@ -109,9 +141,27 @@ window.addEventListener("load", function () {
         },
         loop: true,
       },
+      1280: {
+        slidesPerView: 5, //브라우저가 1024보다 클 때
+        spaceBetween: 150,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+        },
+        loop: true,
+      },
+      1680: {
+        slidesPerView: 5, //브라우저가 1024보다 클 때
+        spaceBetween: 150,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+        },
+        loop: true,
+      },
     },
+    
   });
-  swiper.autoplay.start();
 
   // top 버튼 스크롤 기능
   const topBtn = document.getElementById("top-btn");
@@ -178,8 +228,8 @@ window.addEventListener("load", function () {
     }
   });
   //  스크롤시 영역 배경 그라디언트
-  let scb = 300;
-  let scr = 400;
+  let scb = 400;
+  let scr = 500;
   let movie = document.querySelector(".movie");
   window.addEventListener("scroll", function () {
     scb = window.document.documentElement.scrollTop;
@@ -240,8 +290,16 @@ window.addEventListener("load", function () {
       }
     }
   });
-  // // 스크롤 시 mini section active
- 
+  // 스크롤 시 mini section active
+  let minisc = document.querySelector(".mini");
+  window.addEventListener("scroll", function () {
+    scr = window.document.documentElement.scrollTop;
+    if (scr > miniscr) {
+      minisc.classList.add("mini-active");
+    } else {
+      minisc.classList.remove("mini-active");
+    }
+  });
 
   // 스크롤 시 square section active
   let square = document.querySelector(".square");
@@ -276,3 +334,5 @@ window.addEventListener("load", function () {
     }
   });
 });
+
+

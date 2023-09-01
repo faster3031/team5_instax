@@ -74,6 +74,12 @@
   .footer .inner {
     padding: 0 20px;
   }
+  .footer-left{
+    padding: 0 25px;
+  }
+  .footer-right{
+    padding: 0 25px;
+  }
   .footer-bottom ul li {
     font-size: 14px;
   }
