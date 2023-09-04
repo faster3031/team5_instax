@@ -8,7 +8,7 @@
   content: "";
   width: 100%;
   height: 100%;
-  background: linear-gradient(#c0adb000,#c1adfb,#c1adfb,#c0adb000);
+  background: linear-gradient(#c0adb000,#d7c9ff,#d7c9ff,#c0adb000);
   opacity: 0;
   transition: 1s;
   position: absolute;
@@ -26,7 +26,6 @@ video {
   overflow: hidden;
   position: absolute;
   width: 100%;
-  height: 70%;
   top: 57%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -42,7 +41,7 @@ video {
 @media all and (max-width: 1024px) {
   video {
     width: 80%;
-    height: 50%;
+    height: 40%;
   }
 }
 

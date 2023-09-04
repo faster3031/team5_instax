@@ -16,3 +16,11 @@ section {
   padding: 0 20px;
   height: 100%;
 }
+/* 초기 상태 */
+.wrap {
+  opacity: 0;
+  transition:opacity 0.5s; /* 서서히 나타나도록 1초간의 트랜지션 설정 */
+}
+.wrap.visible {
+  opacity: 1;
+}
