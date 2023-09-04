@@ -2,18 +2,29 @@
 $(document).ready(function () {
 
   // 클릭시 점멸
+  var isGrayscale = false;
+
   function flash(e) {
     $(".flash")
-      .show() //show the hidden div
+      .show() // show the hidden div
       .animate({ opacity: 1 }, 100)
       .fadeOut(500)
       .css({ opacity: 0.5 });
+  
+    // .sample-slider img에 filter를 적용 또는 제거
+    if (isGrayscale) {
+      $(".sample-slider img").css("filter", "");
+      isGrayscale = false;
+    } else {
+      $(".sample-slider img").css("filter", "grayscale(1)");
+      isGrayscale = true;
+    }
   }
+  
   $(".flash").hide();
   $(".visual-camera").click(function (e) {
     flash(e);
   });
-
   // 각 섹션의 위치값(세로스크롤 위치)
   const sectionYpos = [1000, 2100, 5300, 6900];
   // 클래스 nav 의 li 를 찾아라
@@ -105,7 +116,7 @@ window.addEventListener("load", function () {
   // swiper
   const swiper = new Swiper(".sample-slider", {
     loop: true,
-    speed: 1000,
+    speed: 1300,
     slidesPerView: 5,
     spaceBetween: 150,
     autoplay: { delay: 0 },
@@ -346,12 +357,7 @@ window.addEventListener("load", function () {
 });
 function openPopup() {
   // 팝업 창을 열고 크기 조절을 비활성화
-  var popup = window.open('event.html', '', 'width=1000,height=3136,resizable=no');
-
-
-
-
-
+  var popup = window.open('event.html', '', 'width=1000,height=3136, resizable=no');
 
   // 팝업 창을 포커스
   popup.focus();
