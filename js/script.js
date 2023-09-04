@@ -39,8 +39,8 @@ $(document).ready(function () {
   });
 
   /* 슬라이드 */
-  var detail_slide = $(".detail-slide");
-  detail_slide.owlCarousel({
+  var detailSlide = $(".detail-slide");
+  detailSlide.owlCarousel({
     items: 3,
     loop: true,
     nav: true,
@@ -52,7 +52,7 @@ $(document).ready(function () {
   });
 
   // detail-slide 마우스 오버 효과
-  const items = detail_slide.find(".item");
+  const items = detailSlide.find(".item");
   $.each(items, function (index, item) {
     // 큰 이미지
     const bigPics = $(item).find(".detail-pic img");
@@ -73,7 +73,6 @@ $(document).ready(function () {
       });
     });
   });
-  
 });
 // 로딩 화면 구현
 var _showPage = function() {
