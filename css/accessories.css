@@ -1,10 +1,10 @@
 /* 악세사리 */
 .accessories {
     height: auto;
-    margin-bottom: 150px;
+    margin-top: 300px;
+    margin-bottom: 250px;
 }
 .accessories .inner{
-    /* background-color: bisque; */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -14,6 +14,15 @@
     font-size: 60px;
     margin: 40px 0;
     font-weight: 700;
+}
+.accessories .background-title{
+    position: absolute;
+    left: -100px;
+    top: -210px;
+    font-family: 'Pacifico', cursive;
+    font-size: 200px;
+    color: #c9c9c9;
+    z-index: -99;
 }
 .accessories .accessories-box{
     display: flex;

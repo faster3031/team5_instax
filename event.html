@@ -10,12 +10,12 @@
     <meta property="og:description" content="인스탁스 홍보 사이트" />
     <meta property="og:image" content="" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon_32x32.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="event-favicon-32x32.png" />
     <link
       rel="icon"
       type="image/png"
       sizes="192x192"
-      href="favicon_192x192.png"
+      href="evnet-favicon-192x192.png"
     />
     <link
       rel="apple-touch-icon-precomposed"
@@ -37,6 +37,9 @@
     <script src="js/event.js"></script>
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -58,11 +61,17 @@
         <!-- 이벤트 메인 -->
         <div class="event-main-logo">
           <img src="images/event-main.png" alt="" />
+          <img src="images/event-date.png" alt="">
         </div>
         <!-- 이벤트 1 -->
         <div class="event1 event-box">
           <div class="event-title">
             <img src="images/event-title1.png" alt="">
+            <div class="event-txt">
+              <span>참여 대상 : 인스탁스를 경험해 보고 싶은 누구나!</span>
+              <span>신청 기간 : 2023년 9월 1일 금요일 ~ 9월 8일 금요일</span>
+              <span>발표 기간 : 2023년 9월 12일 화요일</span>
+            </div>
           </div>
           <div class="event1-main">
             <img src="images/event1-main.png" alt="">
@@ -77,6 +86,11 @@
           <div class="event-title">
             <img src="images/event-title2.png" alt="">
           </div>
+          <span class="event2-main-txt">인스탁스로 꾸미고 인스타그램에 올리면 선물이 팡팡!</span>
+          <div class="event-txt">
+            <span>참여 기간 : 2023년 9월 1일 금요일 ~ 10월 27일 금요일</span>
+            <span>당첨자 발표 : 2023년 10월 31일 화요일</span>
+          </div>
           <div class="event-main">
             <div class="event-info-titles">
               <div class="event-info-title" data-target="event-room"><img src="images/event-info-title1.png" alt=""></div>
@@ -85,57 +99,80 @@
             </div>
             <div class="event-info">
               <div class="event-info-box event-room">
-                <div class="event-tip">
-                  <img src="images/event-tip.png" alt="">
-                  <span>
-                    <b>인스탁스로 꾸민 방을 촬영</b>하여<br>
-                    <b>필수 해시태그</b>를 달아 <b>인스타그램에 업로드</b>하면 참여완료!
-                  </span>
-                </div>
-                <div class="hashtag">#인스탁스 #인스탁스데이 #인스탁스방꾸</div>
-                <div class="event-ex">
-                  <img src="images/event-room1.jpg" alt="">
-                  <img src="images/event-room2.jpg" alt="">
-                </div>
-                <span class="event-txt">베스트 방꾸러에게는 <b>푸짐한 선물</b>을 드립니다.</span>
+                  <div class="event-tip">
+                    <img src="images/event-tip.png" alt="">
+                    <span>
+                      <b>인스탁스로 꾸민 방을 촬영</b>하여<br>
+                      <b>필수 해시태그</b>를 달아 <b>인스타그램에 업로드</b>하면 참여완료!
+                    </span>
+                  </div>
+                  <div class="hashtag">#인스탁스 #인스탁스데이 #인스탁스방꾸</div>
+                  <div class="event-ex">
+                    <img src="images/event-room1.jpg" alt="">
+                    <img src="images/event-room2.jpg" alt="">
+                  </div>
               </div>
               <div class="event-info-box event-film">
-                <div class="event-tip">
-                  <img src="images/event-tip.png" alt="">
-                  <span>
-                    <b>꾸민 인스탁스 필름을 촬영</b>하여<br>
-                    <b>필수 해시태그</b>를 달아 <b>인스타그램에 업로드</b>하면 참여완료!
-                  </span>
-                </div>
-                <div class="hashtag">
-                  <span>#인스탁스 #인스탁스데이 #인스탁스필꾸</span>
-                </div>
-                <div class="event-ex">
-                  <img src="images/event-film1.jpg" alt="">
-                  <img src="images/event-film2.jpg" alt="">
-                </div>
-                <span class="event-txt">베스트 필꾸러에게는 <b>푸짐한 선물</b>을 드립니다.</span>
+                  <div class="event-tip">
+                    <img src="images/event-tip.png" alt="">
+                    <span>
+                      <b>꾸민 인스탁스 필름을 촬영</b>하여<br>
+                      <b>필수 해시태그</b>를 달아 <b>인스타그램에 업로드</b>하면 참여완료!
+                    </span>
+                  </div>
+                  <div class="hashtag">
+                    <span>#인스탁스 #인스탁스데이 #인스탁스필꾸</span>
+                  </div>
+                  <div class="event-ex">
+                    <img src="images/event-film1.jpg" alt="">
+                    <img src="images/event-film2.jpg" alt="">
+                  </div>
+                  <span class="event-txt">베스트 필꾸러에게는 <b>푸짐한 선물</b>을 드립니다.</span>
               </div>
               <div class="event-info-box event-diary">
-                <div class="event-tip">
-                  <img src="images/event-tip.png" alt="">
-                  <span>
-                    <b>인스탁스로 꾸민 다이어리를 촬영</b>하여<br>
-                    <b>필수 해시태그</b>를 달아 <b>인스타그램에 업로드</b>하면 참여완료!
-                  </span>
-                </div>
-                <div class="hashtag">
-                  <span>#인스탁스 #인스탁스데이 #인스탁스다꾸</span>
-                </div>
-                <div class="event-ex">
-                  <img src="images/event-diary1.jpg" alt="">
-                  <img src="images/event-diary2.jpg" alt="">
-                </div>
-                <span class="event-txt">베스트 다꾸러에게는 <b>푸짐한 선물</b>을 드립니다.</span>
+                  <div class="event-tip">
+                    <img src="images/event-tip.png" alt="">
+                    <span>
+                      <b>인스탁스로 꾸민 다이어리를 촬영</b>하여<br>
+                      <b>필수 해시태그</b>를 달아 <b>인스타그램에 업로드</b>하면 참여완료!
+                    </span>
+                  </div>
+                  <div class="hashtag">
+                    <span>#인스탁스 #인스탁스데이 #인스탁스다꾸</span>
+                  </div>
+                  <div class="event-ex">
+                    <img src="images/event-diary1.jpg" alt="">
+                    <img src="images/event-diary2.jpg" alt="">
+                  </div>
+                  <span class="event-txt">베스트 다꾸러에게는 <b>푸짐한 선물</b>을 드립니다.</span>
               </div>
               <a href="#" class="btn">
                 <span>다른 작품 구경하기</span>
               </a>
+              <img src="images/gift-line.png" class="gift-line" alt="">
+              <span class="event2-txt"><b>♥</b>를 가장 많이 받은 베스트 게시물에는 <b>푸짐한 선물</b>을 드립니다.</span>
+              <div class="event-gift">
+                <span class="event-gift1-title gift-title">1등 상품</span>
+                <img src="images/event-gift1.png" class="event-gift1" alt="">
+                <span>인스탁스 mini12 꾸미기 풀세트</span>
+              </div>
+              <div class="event-gift-footer">
+                <div class="event-gift-box">
+                  <span class="event-gift2-title gift-title">2등 상품</span>
+                  <img src="images/mini_12_lilacPurple.png" class="event-gift2" alt="">
+                  <span>인스탁스 mini12 본품</span>
+                </div>
+                <div class="event-gift-box">
+                  <span class="event-gift3-title gift-title">3등 상품</span>
+                  <img src="images/event-gift3.png" class="event-gift3" alt="">
+                  <span>필름 + 꾸미기 세트</span>
+                </div>
+                <div class="event-gift-box">
+                  <span class="event-gift4-title gift-title">4등 상품</span>
+                  <img src="images/event-gift4.png" class="event-gift4" alt="">
+                  <span>한정판 필름 (랜덤)</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

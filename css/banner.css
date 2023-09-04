@@ -1,6 +1,6 @@
 /* 배너 */
 .banner {
-    margin: 100px 0;
+    margin-bottom: 150px;
 }
 .banner .inner{
     display: flex;
