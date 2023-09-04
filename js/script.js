@@ -299,38 +299,55 @@ window.addEventListener("load", function () {
 
  // 스크롤 시 mini section active
  let mini2 = document.querySelector(".mini");
+ let miniPoint = document.querySelector(".mini-point");
+ let miniPoint2 = document.querySelector(".mini-point2");
  let mini2scr = 1990;
  window.addEventListener("scroll", function () {
    scb = window.document.documentElement.scrollTop;
-   console.log(mini2scr);
    if (scb > mini2scr) {
      mini2.classList.add("mini-active");
+     miniPoint.classList.add("active");
+     miniPoint2.classList.add("mini-point2-active");
    } else {
      mini2.classList.remove("mini-active");
+     miniPoint.classList.remove("active");
+     miniPoint2.classList.remove("mini-point2-active");
    }
  });
 
   // 스크롤 시 square section active
   let square = document.querySelector(".square");
+  let squarePoint = document.querySelector(".square-point");
+  let squarePoint2 = document.querySelector(".square-point2");
   let squarescr = 2880;
   window.addEventListener("scroll", function () {
     scb = window.document.documentElement.scrollTop;
     if (scb > squarescr) {
       square.classList.add("square-active");
+      squarePoint.classList.add("active");
+      squarePoint2.classList.add("square-point2-active");
     } else {
       square.classList.remove("square-active");
+      squarePoint.classList.remove("active");
+      squarePoint2.classList.remove("square-point2-active");
     }
   });
   
   // 스크롤 시 wide section active
   let wide = document.querySelector(".wide");
+  let widePoint = document.querySelector(".wide-point");
+  let widePoint2 = document.querySelector(".wide-point2");
   let widescr = 3800;
   window.addEventListener("scroll", function () {
     scb = window.document.documentElement.scrollTop;
     if (scb > widescr) {
       wide.classList.add("wide-active");
+      widePoint.classList.add("active");
+      widePoint2.classList.add("wide-point2-active");
     } else {
       wide.classList.remove("wide-active");
+      widePoint.classList.remove("active");
+      widePoint2.classList.remove("wide-point2-active");
     }
   });
 
