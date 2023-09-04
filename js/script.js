@@ -26,7 +26,7 @@ $(document).ready(function () {
     flash(e);
   });
   // 각 섹션의 위치값(세로스크롤 위치)
-  const sectionYpos = [1000, 2100, 5300, 6900];
+  const sectionYpos = [1000, 2100, 5300, 6300 ,6900];
   // 클래스 nav 의 li 를 찾아라
   // 저장한다. 재활용하기 위해서
   const navLis = $(".nav ul li");
@@ -99,7 +99,7 @@ var _showPage = function() {
 $(window).on("load", function() {
   // 로딩 화면을 보여주기 위한 시간(밀리초) 설정
 
-  var loadingDuration = 3000; // 예: 3000 밀리초 = 3초
+  var loadingDuration = 2500; // 예: 3000 밀리초 = 3초
 
 
   // 로딩 화면을 표시한 후에 _showPage 함수를 호출하는 지연 실행
