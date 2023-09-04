@@ -344,4 +344,16 @@ window.addEventListener("load", function () {
     }
   });
 });
+function openPopup() {
+  // 팝업 창을 열고 크기 조절을 비활성화
+  var popup = window.open('event.html', '', 'width=1000,height=3136,resizable=no');
+
+
+
+
+
+
+  // 팝업 창을 포커스
+  popup.focus();
+}
 
