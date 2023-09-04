@@ -24,7 +24,6 @@
   align-items: center;
   justify-content: space-between;
   align-content: flex-start;
-  /* align-items: flex-end; */
 }
 .mini-circle {
   position: relative;
