@@ -6,7 +6,15 @@
     padding: 0 50px;
 }
 .event .event-main-logo{
-    margin-bottom: 200px;
+    margin-bottom: 120px;
+    text-align: center;
+}
+.event .event-main-logo > img{
+    width: 100%;
+}
+.event .event-main-logo img:last-child{
+    width: 60%;
+    padding-top: 60px;
 }
 .event .event-box {
     width: 100%;
@@ -41,10 +49,10 @@
     text-align: center;
     display: inline-block;
     position: relative;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
-    padding: 10px 0px;
-    width: 200px;
+    padding: 20px 0px;
+    width: 250px;
     border-radius: 6px;
     overflow: hidden;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -78,7 +86,16 @@
 }
 .event .event-title{
     width: 65%;
-    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.event .event-txt{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 70px;
+    color: #fff;
+    line-height: 30px;
 }
 .event .event-title img{
     width: 100%;
@@ -88,6 +105,14 @@
 .event .event2{
     background: #ECA79D;
     border-radius: 100px 0 100px 0;
+    position: relative;
+}
+.event2 .event2-main-txt{
+    font-size: 25px;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .event .event2 .event-main .event-info-titles{
     width: 100%;
@@ -118,11 +143,14 @@
 }
 .event .event2 .event-main .event-info{
     width: 100%;
-    height: 760px;
+    height: auto;
     padding: 50px 0;
     background-color: #fff;
     border-radius: 0 50px 50px 50px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .event .event2 .event-main .event-info-box{
     width: 100%;
@@ -191,15 +219,96 @@
     border-radius: 20px;
     box-shadow: 0 5px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
-.event .event2 .event-txt{
+.event .event2 .event2-txt{
     font-size: 20px;
+    margin-top: 50px;
 }
-.event .event2 .event-txt b{
+.event .event2 .event2-txt b{
     font-weight: 700;
     color: #E93C3C;
 }
 .event .event2 a.btn{
     background-color: #E93C3C;
+}
+
+.event .gift-line{
+    width: 90%;
+    margin-top: 70px;
+}
+.event .event-gift{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.event .event-gift1-title{
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    font-weight: 700;
+    color: #F17979;
+}
+.event .gift-title::after{
+    content: "각 1명";
+    position: absolute;
+    top: -50px;
+    right: -70px;
+    background-image: url("../images/event-gift-after.png");
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 70px;
+    color: #fff;
+}
+.event .event-gift1{
+    width: 400px;
+}
+.event .event-gift-footer{
+    width: 100%;
+    position: relative;
+    margin-top: 100px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.event .event-gift-footer .event-gift-box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 230px;
+}
+.event .event-gift-footer .gift-title{
+    font-size: 20px;
+    font-weight: 700;
+    color: #F17979;
+}
+.event .event-gift-footer img{
+    width: 180px;
+}
+.event .event-gift-footer .gift-title::after{
+    content: "";
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    right: 0;
+    top: -30px;
+}
+.event .event-gift-footer .event-gift2-title::after{
+    content: "각 5명";
+    font-size: 14px;
+}
+.event .event-gift-footer .event-gift3-title::after{
+    content: "각 50명";
+    font-size: 12px;
+}
+.event .event-gift-footer .event-gift4-title::after{
+    content: "각 100명";
+    font-size: 10px;
 }
 
 /* event-footer */
