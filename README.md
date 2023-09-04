@@ -8,5 +8,6 @@
 
 ## 프로젝트 관련 자료
 
-- Notion : [노션](http://)
-- 배포 URL : [배포](http://)
+- Notion : [노션](https://www.notion.so/1f17750cbe5a4797b98ff14743bd200f)
+- Figma : [피그마](https://www.figma.com/file/2yro1k97WFku0htjNzMNlW/5_team?type=design&node-id=0%3A1&mode=design&t=oZ8UWNIO5MJA1ibF-1)
+- 배포 URL : [배포 URL](http://)

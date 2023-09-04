@@ -40,11 +40,16 @@ video {
 }
 @media all and (max-width: 1024px) {
   video {
-    width: 80%;
-    height: 40%;
+    width: 90%;
+    height: 45%;
   }
 }
-
+@media all and (max-width: 900px) {
+  video {
+    width: 90%;
+    height: 45%;
+  }
+}
 /* mobile */
 @media all and (max-width: 768px) {
   video {
