@@ -64,7 +64,7 @@
 }
 .footer-bottom ul li {
   line-height: 100px;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 @media all and (max-width: 1680px) {
@@ -108,7 +108,7 @@
     display: none;
   }
   .footer-bottom ul li{
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 @media all and (max-width: 480px) {
