@@ -256,10 +256,7 @@
   right: -12%;
     z-index: 999;
   }
-  .mini-point2 img {
-
-    
-   }
+ 
 }
 @media all and (max-width: 480px) {
   .mini .inner {
