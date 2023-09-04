@@ -55,27 +55,27 @@
   left: -9%;
   z-index: 1;
   min-width: 50px;
+  width: 13%;
 }
 .wide-point{
   width: 50%;
 
 }
 .wide-point img{
-  width: 40%;
+  width: 53%;
   z-index: 999;
 }
 .wide-point2 img{
-width: 100%;
+  width: 89%;
   
 }
 .wide-point-text {
   position: absolute;
   bottom: -10px;
-  right: 60px;
+  right: 38px;
   color: #000000;
   font-size: 20px;
   font-weight: 400;
-  /* background-color: blueviolet; */
 }
 .wide-point-text2 {
   position: absolute;
@@ -83,8 +83,8 @@ width: 100%;
   font-size: 20px;
   font-weight: 400;
   top: -25%;
-    left: -65%;
-    width: 100px;
+  left: -49%;
+  width: 100px;
 }
 
 .wide-camera {
@@ -178,24 +178,33 @@ width: 100%;
 @media all and (max-width: 480px) {
   .wide .inner{
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    align-content: flex-start;
+    flex-wrap: wrap;
+    height: 800px;
+    align-content: center;
+    justify-content: space-around;
   }
   .wide-point img{
     width: 70%;
   }
   .wide-point-text {
-    font-size: 10px;
-   right: -1%;
-   left: 149px;
+  font-size: 10px;
+   right: -11px;
   }
   .wide-point-text2 {
     font-size: 10px;
-   
+    left: -80%;
+  }
+  .wide-text h1 {
+    font-size: 30px;
+  }
+  .wide-text h4 {
+    font-size: 13px;
+    margin-bottom: 40px;
+  }
+  .wide-circle {
+    width: 70%;
     
   }
-  
  
   }
  

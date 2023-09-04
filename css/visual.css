@@ -24,7 +24,8 @@
   left: 15%;
   width: 200px;
   height: 200px;
-  animation: transY 2.5s ease-in-out;
+  animation: transY 3.5s ease-in-out;
+
 }
 .visual-camera img:nth-child(2) {
   transition: all 1s;
@@ -33,7 +34,8 @@
   left: 26%;
   width: 300px;
   height: 300px;
-  animation: transY 2.7s ease-in-out;
+  animation: transY 3.7s ease-in-out;
+
 }
 .visual-camera img:nth-child(3) {
   transition: all 1s;
@@ -42,8 +44,9 @@
   left: 38%;
   width: 250px;
   height: 250px;
-  z-index: 1;
-  animation: transY 2.6s ease-in-out;
+  z-index: -1;
+  animation: transY 3.6s ease-in-out;
+
 }
 .visual-camera img:nth-child(4) {
   transition: all 1s;
@@ -52,7 +55,8 @@
   left: 55%;
   width: 300px;
   height: 300px;
-  animation: transY 2.1s ease-in-out;
+  z-index: -1;
+  animation: transY 3.1s ease-in-out;
 }
 .visual-camera img:nth-child(5) {
   transition: all 1s;
@@ -61,7 +65,8 @@
   left: 65%;
   width: 450px;
   height: 450px;
-  animation: transY 2.9s ease-in-out;
+  animation: transY 3.9s ease-in-out;
+
 }
 @keyframes transY {
   0% {
@@ -85,6 +90,7 @@
   margin: 150px;
   /* height: 300px; */
   opacity: 1;
+  filter: grayscale(0);
 }
 .sample-slider .swiper-wrapper {
   transition-timing-function: linear;
@@ -190,31 +196,33 @@
   .visual-camera img {
     z-index: 2;
     opacity: 1;
-    scale: 0.4;
+    scale: 0.5;
   }
   .visual-camera img:first-child {
     position: absolute;
-    bottom: 30%;
-    left: -8%;
+    bottom: 24%;
+    left: 7%;
   }
   .visual-camera img:nth-child(2) {
     position: absolute;
     bottom: 30%;
     left: -3%;
+    display: none;
   }
   .visual-camera img:nth-child(3) {
     position: absolute;
     bottom: 30%;
     left: 13%;
+    display: none;
   }
   .visual-camera img:nth-child(4) {
     position: absolute;
-    bottom: 30%;
-    left:30%;
+    bottom: 24%;
+    left:15%;
   }
   .visual-camera img:nth-child(5) {
     position: absolute;
-    bottom: 20%;
-    left:32%;
+    bottom: 15%;
+    left:25%;
   }
 }
