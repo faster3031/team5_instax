@@ -88,7 +88,9 @@ var _showPage = function() {
 // 페이지 로딩이 완료되면 일정 시간 후에 _showPage 함수를 호출하여 화면 전환
 $(window).on("load", function() {
   // 로딩 화면을 보여주기 위한 시간(밀리초) 설정
+
   var loadingDuration = 3000; // 예: 3000 밀리초 = 3초
+
 
   // 로딩 화면을 표시한 후에 _showPage 함수를 호출하는 지연 실행
   setTimeout(function() {
@@ -342,5 +344,4 @@ window.addEventListener("load", function () {
     }
   });
 });
-
 
