@@ -264,7 +264,7 @@ window.addEventListener("load", function () {
   let miniFilm3 = document.querySelector(".mini-film3");
   let miniFilm4 = document.querySelector(".mini-film4");
   let miniFilm5 = document.querySelector(".mini-film5");
-  let miniscr =2000;
+  let miniscr =1700;
   let miniMoveFlag = true;
   window.addEventListener("scroll", function () {
     scb = window.document.documentElement.scrollTop;
@@ -311,7 +311,7 @@ window.addEventListener("load", function () {
  let mini2 = document.querySelector(".mini");
  let miniPoint = document.querySelector(".mini-point");
  let miniPoint2 = document.querySelector(".mini-point2");
- let mini2scr = 1990;
+ let mini2scr = 1700;
  window.addEventListener("scroll", function () {
    scb = window.document.documentElement.scrollTop;
    if (scb > mini2scr) {
@@ -329,7 +329,7 @@ window.addEventListener("load", function () {
   let square = document.querySelector(".square");
   let squarePoint = document.querySelector(".square-point");
   let squarePoint2 = document.querySelector(".square-point2");
-  let squarescr = 2880;
+  let squarescr = 2300;
   window.addEventListener("scroll", function () {
     scb = window.document.documentElement.scrollTop;
     if (scb > squarescr) {
@@ -347,7 +347,7 @@ window.addEventListener("load", function () {
   let wide = document.querySelector(".wide");
   let widePoint = document.querySelector(".wide-point");
   let widePoint2 = document.querySelector(".wide-point2");
-  let widescr = 3800;
+  let widescr = 3500;
   window.addEventListener("scroll", function () {
     scb = window.document.documentElement.scrollTop;
     if (scb > widescr) {
