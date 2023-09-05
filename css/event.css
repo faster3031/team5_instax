@@ -25,11 +25,12 @@
     align-items: center;
     padding: 150px 100px;
 }
+
 /* event1 */
 .event .event1{
     background: #C1ADFB;
     border-radius: 100px 0 100px 0;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 }
 .event .event1 .event1-main{
     position: relative;
@@ -118,8 +119,7 @@
     height: 70px;
     display: flex;
 }
-.event .event2 .event-main .event-info-titles > div{
-    width: 170px;
+.event .event2 .event-main .event-info-titles > .event-info-title{
     height: 70px;
     background: #F17979;
     border-radius: 30px 30px 0 0;
@@ -133,11 +133,11 @@
 .event .event2 .event-main .event-info-titles > div img{
     width: 45%;
 }
-.event .event2 .event-main .event-info-titles > div:hover{
+.event .event2 .event-main .event-info-titles > .event-info-title.hovered{
     background: #ffcac2;
     color: #000;
 }
-.event .event2 .event-main .event-info-titles > div:hover img{
+.event .event2 .event-main .event-info-titles > .event-info-title.hovered img{
     filter: invert(50%) sepia(6%) saturate(7278%) hue-rotate(309deg) brightness(93%) contrast(104%);
 }
 .event .event2 .event-main .event-info{
@@ -220,7 +220,7 @@
 }
 .event .event2 .event2-txt{
     font-size: 20px;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 .event .event2 .event2-txt b{
     font-weight: 700;
@@ -232,7 +232,7 @@
 
 .event .gift-line{
     width: 90%;
-    margin-top: 70px;
+    margin-top: 100px;
 }
 .event .event-gift{
     position: relative;

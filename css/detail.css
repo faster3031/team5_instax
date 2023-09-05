@@ -3,13 +3,13 @@
     position: relative;
     width: 100%;
     text-align: center;
-    margin-bottom: 130px;
+    margin-bottom: 70px;
     overflow: hidden;
 }
 
 /* 본문 */
 .detail .inner {
-    padding-top: 150px;
+    padding-top: 100px;
     position: relative;
     overflow: visible;
 }
@@ -278,8 +278,12 @@
 .detail .inner .detail-info > a:before {
     border-color: #fff;
 }
+.detail .inner .owl-item.active{
+    z-index: -1;
+}
 .detail .inner .owl-item.active.center {
     opacity: 1;
+    z-index: 1;
 }
 /* 센터 카메라 크기 */
 .detail .inner .owl-item.active.center .item {
@@ -369,7 +373,7 @@
         margin-bottom: 0;
     }
     .detail .inner{
-        padding-top: 100px;
+        padding-top: 70px;
     }
     .detail .inner .detail-info{
         left: -100%;
@@ -387,8 +391,8 @@
 }
 @media all and (max-width: 1024px) {
     .detail .inner{
-        margin-bottom: 100px;
-        margin-top: 200px;
+        margin-bottom: 90px;
+        margin-top: 80px;
     }
     .detail .inner .detail-info{
         left: 23%;
@@ -434,10 +438,12 @@
 }
 /* mobile */
 @media all and (max-width: 768px) {
-    
+    .detail .inner{
+        margin-bottom: 0;
+    }
     .detail .item .background-title{
-        left: -10vw;
-        top: 190%;
+        left: -15vw;
+        top: 45%;
         font-size: 25vw;
     }
     .detail .inner .detail-info .detail-title{
@@ -453,15 +459,21 @@
 }
 @media all and (max-width: 480px) {
     .detail .inner{
+        margin-top: 0;
         margin-bottom: 0;
-    }
-    .detail .item .background-title{
-        left: 100vw;
-        top: 190%;
-        font-size: 25vw;
+        padding-top: 0;
     }
     .detail .inner .detail-color > div{
         width: 6vw;
         height: 6vw;
+    }
+    .detail .item .background-title{
+        left: 5vw;
+        top: 75%;
+        font-size: 25vw;
+    }
+    .detail .inner .item {
+        margin-top: 200px;
+        height: 500px;
     }
 }
