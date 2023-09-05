@@ -83,9 +83,10 @@
 .wide-point-text {
   position: absolute;
   bottom: -10px;
-  right: 38px;
+  left: 56%;
   color: #000000;
   font-size: 20px;
+  width: 91px;
   font-weight: 400;
 }
 .wide-point-text2 {
