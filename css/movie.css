@@ -1,6 +1,6 @@
 /* 영상 */
 .movie {
-  height: 1180px;
+  height: 100vh;
   position: relative;
   z-index: 1;
 }
