@@ -107,8 +107,10 @@
         height: auto;
     }
     .banner-button{
-        padding: 5px 20px;
         font-size: 16px;
+    }
+    .banner-box{
+        aspect-ratio: 0;
     }
 }
 @media all and (max-width: 480px) {

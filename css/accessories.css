@@ -1,7 +1,7 @@
 /* 악세사리 */
 .accessories {
     height: auto;
-    padding-top: 300px;
+    padding-top: 170px;
     padding-bottom: 250px;
 }
 .accessories .inner{
@@ -9,11 +9,6 @@
     align-items: center;
     flex-direction: column;
     height: 800;
-}
-.accessories-title{
-    font-size: 60px;
-    margin: 40px 0;
-    font-weight: 700;
 }
 .accessories .background-title{
     position: absolute;
@@ -110,18 +105,24 @@
 @media all and (max-width: 1680px) {
 }
 @media all and (max-width: 1280px) {
-    .accessories .accessories-box{
-        /* display: flex;
-        justify-content: space-between;
-        width: 100%;
-        flex-wrap: wrap;
-        gap: 2%; */
-    }
 }
 @media all and (max-width: 1024px) {
+    .accessories .background-title{
+        left: -40px;
+        top: -180px;
+        font-size: 170px;
+    }
 }
 /* mobile */
 @media all and (max-width: 768px) {
+    .accessories{
+        padding-top: 80px;
+    }
+    .accessories .background-title{
+        left: -30px;
+        top: -105px;
+        font-size: 120px;
+    }
     .imghoverevent{
         width: 48%;
         aspect-ratio: 1 / 1;
@@ -148,5 +149,10 @@
     .hoverbox span p{
         left: 60px;
         font-size: 6vw;
+    }
+    .accessories .background-title{
+        left: -20px;
+        top: -62px;
+        font-size: 80px;
     }
 }

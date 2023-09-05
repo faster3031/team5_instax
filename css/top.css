@@ -113,9 +113,12 @@
 }
 @media all and (max-width: 480px) {
     .top-event-button{
-        width: 110px;
+        width: 100px;
     }
     .top-button-pop {
-        height: 71px;
+        height: 65px;
+    }
+    .top-button-pop p{
+        font-size: 11px;
     }
 }
