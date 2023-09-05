@@ -66,7 +66,9 @@
   width: 450px;
   height: 450px;
   animation: transY 3.4s ease-in-out;
-
+}
+.visual-camera img:nth-child(5):hover{
+  scale: 1.1;
 }
 @keyframes transY {
   0% {
@@ -144,6 +146,9 @@
     bottom: 10%;
     left:55%;
   }
+  .visual-camera img:nth-child(5):hover{
+    scale: 0.8;
+  }
 }
 /* mobile */
 @media all and (max-width: 768px) {
@@ -182,6 +187,9 @@
     position: absolute;
     bottom: 10%;
     left:50%;
+  }
+  .visual-camera img:nth-child(5):hover{
+    scale: 0.6;
   }
 }
 @media all and (max-width: 530px) {
@@ -223,4 +231,7 @@
     bottom: 15%;
     left:25%;
   }
+  .visual-camera img:nth-child(5):hover{
+    scale: 0.6;
+}
 }
