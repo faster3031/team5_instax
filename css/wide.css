@@ -1,6 +1,6 @@
 /* 와이드 필름 */
 .wide {
-  height: 1080px;
+  height: 100vh;
   display: block;
   position: relative;
 }
@@ -156,9 +156,15 @@ width: 100%;
 }
 /* mobile */
 @media all and (max-width: 768px) {
+  .wide{
+    height: auto;
+    padding: 100px 0;
+  }
   .wide .inner{
     flex-wrap: wrap;
     text-align: center;
+    align-content: center;
+    gap: 50px 0;
   }
   .wide-circle{
     order: 2;

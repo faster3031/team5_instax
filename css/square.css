@@ -1,6 +1,6 @@
 /* 스퀘어 필름 */
 .square {
-    height: 1080px;
+  height: 100vh;
     position: relative;
 }
 .square::before{
