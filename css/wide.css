@@ -188,6 +188,39 @@ width: 100%;
   }
   
 }
+@media all and (max-width: 500px) {
+  .wide .inner{
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .wide-circle{
+    order: 2;
+    width: 75%;
+  left: 20%;
+  }
+  .wide-text {
+    order: 1;
+    width: 100%;
+  }
+  .wide-text h1 {
+    font-size: 5vw;
+   
+  }
+  .wide-text h4 {
+    font-size: 2vw;
+  }
+  .wide-point{
+    left: 30%;
+  }
+  .wide-point-text {
+    font-size: 15px;
+    
+  }
+  .wide-point-text2 {
+    font-size: 15px;
+  }
+  
+}
 @media all and (max-width: 480px) {
   .wide .inner{
     display: flex;

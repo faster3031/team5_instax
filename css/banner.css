@@ -44,7 +44,7 @@
     background-color: #C1ADFB;
 }
 .banner .banner-img{
-    width: 500px;
+    width: 100%;
     height: 300px;
     text-align: center;
 }
@@ -92,7 +92,7 @@
         padding: 1px 30px;
     }
     .banner .banner-img{
-        width: 500px;
+        width: 100%;
         height: 250px;
         text-align: center;
     }
