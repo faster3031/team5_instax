@@ -26,7 +26,7 @@ $(document).ready(function () {
     flash(e);
   });
   // 각 섹션의 위치값(세로스크롤 위치)
-  const sectionYpos = [1000, 2100, 5300, 6300 ,6900];
+  const sectionYpos = [1050, 2000, 4900, 5900 ,6600];
   // 클래스 nav 의 li 를 찾아라
   // 저장한다. 재활용하기 위해서
   const navLis = $(".nav ul li");

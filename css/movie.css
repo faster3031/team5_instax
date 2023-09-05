@@ -1,8 +1,9 @@
 /* 영상 */
 .movie {
-  height: 100vh;
+  height: 120vh;
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 .movie::before{
   content: "";
@@ -20,7 +21,7 @@
 }
 .movie .inner {
   position: relative;
-  height: 1080px;
+  height: 120vh;
 }
 video {
   overflow: hidden;
@@ -34,14 +35,21 @@ video {
   z-index: 2;
 }
 @media all and (max-width: 1680px) {
+  video {
+    width: 90%;
+  }
 }
 
 @media all and (max-width: 1280px) {
+  video {
+    width: 90%;
+    height: 50%;
+  }
 }
 @media all and (max-width: 1024px) {
   video {
     width: 90%;
-    height: 45%;
+    height: 50%;
   }
 }
 @media all and (max-width: 900px) {
@@ -52,6 +60,9 @@ video {
 }
 /* mobile */
 @media all and (max-width: 768px) {
+  .movie .inner{
+    height: 100vh;
+  }
   video {
     width: 90%;
     height: 30%;
