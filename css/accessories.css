@@ -1,8 +1,8 @@
 /* 악세사리 */
 .accessories {
     height: auto;
-    margin-top: 300px;
-    margin-bottom: 250px;
+    padding-top: 300px;
+    padding-bottom: 250px;
 }
 .accessories .inner{
     display: flex;
