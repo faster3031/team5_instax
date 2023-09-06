@@ -1,5 +1,5 @@
 /* 탑 버튼 */
-.top-button {
+.top-button{
     position: fixed;
     right: 30px;
     bottom: 40px;
@@ -55,15 +55,16 @@
         transform: translateY(0);
     }
 }
-.top-button-pop {
+.top-button-pop{
     position: relative;
-    background-image: url("../images/speech-bubble.png");
+    background-image: url("../images/top-speech-bubble.png");
     background-size: 100%;
-    width: 90%;
+    top: -5px;
+    width: 80%;
     height: 97px;
     display: none;
 }
-.top-button-pop p {
+.top-button-pop p{
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -72,7 +73,7 @@
     font-size: 14px;
     display: inline-block;
 }
-.top-btn {
+.top-btn{
     display: block;
     background-color: #e45e5e96;
     border-radius: 50%;
@@ -80,10 +81,10 @@
     line-height: 55px;
     text-align: center;
 }
-.top-btn img {
+.top-btn img{
     transform: rotate(180deg);
 }
-.top-btn img.up {
+.top-btn img.up{
     transform: rotate(0deg);
 }
 
@@ -96,19 +97,22 @@
 }
 /* mobile */
 @media all and (max-width: 768px) {
-    .top-button {
+    .top-button{
         right: 10px;
         bottom: 30px;
     }
     .top-event-button{
         width: 120px;
     }
-    .top-button-pop {
+    .top-button-pop{
         height: 77px;
     }
-    .top-btn {
+    .top-btn{
         width: 45px;
         line-height: 45px;
+    }
+    .top-button-pop p{
+        font-size: 12px;
     }
 }
 @media all and (max-width: 480px) {
@@ -119,6 +123,6 @@
         height: 65px;
     }
     .top-button-pop p{
-        font-size: 11px;
+        font-size: 10px;
     }
 }
