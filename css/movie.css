@@ -1,6 +1,6 @@
 /* 영상 */
 .movie {
-  height: 120vh;
+ 
   position: relative;
   z-index: 1;
   overflow: hidden;

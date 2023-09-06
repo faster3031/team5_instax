@@ -264,7 +264,7 @@ window.addEventListener("load", function () {
   let miniFilm3 = document.querySelector(".mini-film3");
   let miniFilm4 = document.querySelector(".mini-film4");
   let miniFilm5 = document.querySelector(".mini-film5");
-  let miniscr =1700;
+  let miniscr =1500;
   let miniMoveFlag = true;
   window.addEventListener("scroll", function () {
     scb = window.document.documentElement.scrollTop;
@@ -311,7 +311,7 @@ window.addEventListener("load", function () {
  let mini2 = document.querySelector(".mini");
  let miniPoint = document.querySelector(".mini-point");
  let miniPoint2 = document.querySelector(".mini-point2");
- let mini2scr = 1700;
+ let mini2scr = 1400;
  window.addEventListener("scroll", function () {
    scb = window.document.documentElement.scrollTop;
    if (scb > mini2scr) {
