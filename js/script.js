@@ -271,7 +271,6 @@ window.addEventListener("load", function () {
     console.log(miniscr);
     if (scb >= miniscr) {
       if (miniMoveFlag) {
-       
         miniFilm1.classList.add("mini-film1-active");
         setTimeout(() => {
           miniFilm2.classList.add("mini-film2-active");
