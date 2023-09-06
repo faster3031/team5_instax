@@ -197,6 +197,7 @@
     transition-timing-function: linear;
   }
   .visual {
+    height: 800px;
     background-size: 400px;
   }
   .visual-camera img {
@@ -206,7 +207,7 @@
   }
   .visual-camera img:first-child {
     position: absolute;
-    bottom: 24%;
+    bottom: 14%;
     left: 7%;
   }
   .visual-camera img:nth-child(2) {
@@ -223,12 +224,12 @@
   }
   .visual-camera img:nth-child(4) {
     position: absolute;
-    bottom: 24%;
+    bottom: 14%;
     left:15%;
   }
   .visual-camera img:nth-child(5) {
     position: absolute;
-    bottom: 15%;
+    bottom: 5%;
     left:25%;
   }
   .visual-camera img:nth-child(5):hover{

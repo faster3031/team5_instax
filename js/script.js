@@ -26,7 +26,7 @@ $(document).ready(function () {
     flash(e);
   });
   // 각 섹션의 위치값(세로스크롤 위치)
-  const sectionYpos = [1050, 2000, 4900, 5900 ,6600];
+  const sectionYpos = [1000, 2050, 4900, 5800 ,6500];
   // 클래스 nav 의 li 를 찾아라
   // 저장한다. 재활용하기 위해서
   const navLis = $(".nav ul li");
@@ -48,6 +48,32 @@ $(document).ready(function () {
       $("html, body").animate({ scrollTop: sectionYpos[index] }, "slow");
     });
   });
+
+  //  반응형
+    // 각 섹션의 위치값(세로스크롤 위치)
+    const mbsectionYpos = [900, 1700, 4300, 5000 ,6100];
+    // 클래스 nav 의 li 를 찾아라
+    // 저장한다. 재활용하기 위해서
+    const mbnavLis = $(".nav-mb ul li");
+    // li 에 a 태그를 클릭을 해서 스크롤을 이동
+    const mbnavLisA = $(".nav-mb ul li a");
+    // 클릭 기능 구현
+    $.each(mbnavLisA, function (index, item) {
+      // item 은 a 태그를 말합니다.
+      // item 을 클릭을 할 겁니다.
+      // item 은 html 태그 (jQuery 용도)
+      $(this).click(function (event) {
+        // a 태그의 href 막기
+        event.preventDefault();
+        // li 의 모든 클래스 제거
+        mbnavLis.removeClass("focus-active");
+        // 클릭된 li 에 focus-active 추가하기
+        mbnavLis.eq(index).addClass("focus-active");
+        // 2. 클릭하면 스크롤바가 움직인다.
+        $("html, body").animate({ scrollTop: mbsectionYpos[index] }, "slow");
+      });
+    });
+  
 
   /* 슬라이드 */
   var detailSlide = $(".detail-slide");
@@ -112,6 +138,18 @@ window.onload = function () {};
 
 
 window.addEventListener("load", function () {
+
+  // 모바일 메뉴 토글
+  const toggleButton = document.getElementById('toggleButton');
+const navMb = document.querySelector('.nav-mb');
+
+toggleButton.addEventListener('click', () => {
+    if (navMb.style.opacity === '1') {
+        navMb.style.opacity = '0';
+    } else {
+        navMb.style.opacity = '1';
+    }
+});
   // swiper
   const swiper = new Swiper(".sample-slider", {
     loop: true,
