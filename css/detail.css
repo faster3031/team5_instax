@@ -7,7 +7,6 @@
     overflow: hidden;
 }
 
-/* 본문 */
 .detail .inner {
     padding-top: 100px;
     position: relative;
@@ -415,10 +414,12 @@
         left: 50%;
     }
     .detail .inner .detail-info.new::before{
-        left: 31.5%;
+        left: 29.8%;
+        top: -40px;
     }
     .detail .inner .detail-info.new::after{
-        left: 31.5%;
+        left: 29.8%;
+        top: -40px;
     }
     .detail .item .background-title{
         left: -20vw;
@@ -434,6 +435,11 @@
     .detail .inner .detail-color > div{
         width: 4vw;
         height: 4vw;
+    }
+    .detail .inner .detail-title{
+        width: 310px;
+        line-height: 60px;
+        text-align: center;
     }
 }
 /* mobile */
@@ -455,6 +461,14 @@
     .detail .inner .detail-color > div{
         width: 5vw;
         height: 5vw;
+    }
+    .detail .inner .detail-info.new::before{
+        left: 34.5%;
+        top: -30px;
+    }
+    .detail .inner .detail-info.new::after{
+        left: 34.5%;
+        top: -30px;
     }
 }
 @media all and (max-width: 480px) {

@@ -74,7 +74,7 @@ i{
 }
 .nav-mb ul li{
   display: none;
-  background-color: #eeeeeee7;
+  background-color: #eee;
   width: 120px;
   line-height: 50px;
   height: 50px;
@@ -118,6 +118,7 @@ i{
   }
   i{
     opacity: 1;
+    cursor: pointer;
   }
   .header .inner {
     padding: 0 20px;
@@ -130,6 +131,17 @@ i{
   }
   .nav ul li a {
     font-size: 12px;
+  }
+  .nav-mb ul li a{
+    color: #eee;
+    font-weight: 500;
+  }
+  .nav-mb ul li:hover a{
+    color: #000;
+    font-weight: 700;
+  }
+  .nav-mb ul li{
+    background-color: rgba(0,0,0,0.3);
   }
 }
 @media all and (max-width: 540px) {
