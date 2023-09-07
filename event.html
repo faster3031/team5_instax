@@ -111,9 +111,37 @@
             <img src="images/event1-main.png" alt="" />
             <img src="images/event1-img.png" alt="" />
           </div>
+          <button id="open-modal-button">
           <a href="#" class="btn">
             <span>대여 신청하기</span>
-          </a>
+          </a></button>
+        </div>
+        <!-- 모달창 -->
+        <div id="event-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" id="close-modal-button">&times;</span>
+                <h2>이벤트 참여 양식</h2>
+                <form id="registration-form">
+                    <label for="name">이름</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">전화번호</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    
+                    <button type="submit">참여하기</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="result-modal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <h2>참여 결과</h2>
+                <p id="result-message"></p>
+                <button id="close-result-button">닫기</button>
+            </div>
         </div>
         <!-- 이벤트 2 -->
         <div
@@ -257,6 +285,50 @@
     </div>
   </body>
   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const openModalButton = document.getElementById('open-modal-button');
+    const closeModalButton = document.getElementById('close-modal-button');
+    const closeResultButton = document.getElementById('close-result-button');
+    const eventModal = document.getElementById('event-modal');
+    const resultModal = document.getElementById('result-modal');
+    const registrationForm = document.getElementById('registration-form');
+    const resultMessage = document.getElementById('result-message');
+
+    // 모달 열기
+    openModalButton.addEventListener('click', function() {
+        eventModal.style.display = 'block';
+    });
+
+    // 모달 닫기
+    closeModalButton.addEventListener('click', function() {
+        eventModal.style.display = 'none';
+    });
+
+    // 이벤트 참여 양식 제출
+    registrationForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // 사용자가 입력한 정보 가져오기
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+
+        // 간단한 양식 검증 (여기서는 각 필드가 비어 있는지만 확인)
+        if (name === '' || email === '' || phone === '') {
+            alert('모든 필드를 작성해주세요.');
+            return;
+        }
+
+        // 결과 메시지 표시
+        resultMessage.textContent = `${name}님, 이벤트에 참여해주셔서 감사합니다!`;
+        resultModal.style.display = 'block';
+    });
+
+    // 결과 모달 닫기
+    closeResultButton.addEventListener('click', function() {
+        resultModal.style.display = 'none';
+    });
+});
     AOS.init();
   </script>
   <!-- Google Tag Manager (noscript) -->
