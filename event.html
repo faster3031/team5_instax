@@ -108,9 +108,8 @@
             <img src="images/event1-img.png" alt="이벤트1 메인이미지" />
           </div>
           <button id="open-modal-button">
-          <a href="#" class="btn">
             <span>대여 신청하기</span>
-          </a></button>
+          </button>
         </div>
         <!-- 모달창 -->
         <div id="event-modal" class="modal">
@@ -126,7 +125,16 @@
 
                     <label for="phone">전화번호</label>
                     <input type="tel" id="phone" name="phone" required>
-                    
+                    <label for="selection">선택사항</label>
+                    <select id="selection">
+                        <option value="옵션1">instax mini 12</option>
+                        <option value="옵션2">instax mini 40</option>
+                        <option value="옵션3">instax mini 90</option>
+                        <option value="옵션4">instax square sq 1</option>
+                        <option value="옵션5">instax square sq 40</option>
+                        <option value="옵션6">instax square wide 300</option>
+                        <!-- 필요한 옵션을 추가하세요 -->
+                    </select>
                     <button type="submit">참여하기</button>
                 </form>
             </div>
@@ -303,7 +311,30 @@
     closeResultButton.addEventListener('click', function() {
         resultModal.style.display = 'none';
     });
+    // 이벤트 참여 양식 제출
+registrationForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // 사용자가 입력한 정보 가져오기
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+
+    // 간단한 양식 검증 (여기서는 각 필드가 비어 있는지만 확인)
+    if (name === '' || email === '' || phone === '') {
+        alert('모든 필드를 작성해주세요.');
+        return;
+    }
+
+    // 결과 메시지 표시
+    resultMessage.textContent = `${name}님, 이벤트에 참여해주셔서 감사합니다!`;
+    resultModal.style.display = 'block';
+
+    // 참여 완료 후 모달 창 닫기
+    eventModal.style.display = 'none';
 });
+});
+
     AOS.init();
   </script>
   <!-- Google Tag Manager (noscript) -->
